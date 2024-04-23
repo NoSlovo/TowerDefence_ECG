@@ -15,8 +15,6 @@ public class LevelInitState : IGameState
     public void EnterState()
     {
         var level = GameObject.Instantiate(_levelPrefab);
-        var enemyFactory = new MonsterFactory(_enemyPrefab, level.endPointlevel);
-        ServiceLocator.Instance.RegisterService<IEnemyFactory>(enemyFactory);
         level.Init();
     }
 

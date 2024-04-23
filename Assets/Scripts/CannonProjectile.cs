@@ -13,6 +13,8 @@ public class CannonProjectile : MonoBehaviour {
 		var monster = other.gameObject.GetComponent<Monster> ();
 		if (monster == null)
 			return;
+
+		monster.TakeDamage(m_damage);
 		Destroy (gameObject);
 	}
 }

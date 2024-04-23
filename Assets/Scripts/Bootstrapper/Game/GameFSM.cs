@@ -15,17 +15,14 @@ public class GameFSM : MonoBehaviour, IGameFSM
     {
         _gameStates = new Dictionary<Type, IGameState>()
         {
-            [typeof(BootstraperState)] = new BootstraperState(this),
+            [typeof(BootstraperState)] = new BootstraperState(this, _monster, _levelPrefab),
             [typeof(LevelInitState)] = new LevelInitState(_levelPrefab, _monster),
         };
     }
 
-    private void Start()
-    {
-        EnterState<BootstraperState>();
-    }
-
-
+    private void Start() => EnterState<BootstraperState>();
+    
+    
     public void EnterState<T>() where T : IEnterGameState
     {
         _lastState?.ExitState();
