@@ -259,7 +259,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c3c12c88e551114eb77254dd664b572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelPrefab: {fileID: 5856839141392468329, guid: 84d919a9decab334e883ec18a0eeb74c, type: 3}
+  _levelPrefab: {fileID: 2848384085329875777, guid: 84d919a9decab334e883ec18a0eeb74c, type: 3}
+  _monster: {fileID: 1363311620161300142, guid: d052042cdd67d824cb974b7a5dd71d1a, type: 3}
 --- !u!1 &840437479
 GameObject:
   m_ObjectHideFlags: 0

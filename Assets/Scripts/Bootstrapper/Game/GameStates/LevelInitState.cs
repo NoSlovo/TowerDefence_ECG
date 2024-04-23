@@ -1,6 +1,5 @@
-﻿using System;
-using Spawners.Factory;
-using Object = UnityEngine.Object;
+﻿using Spawners.Factory;
+using UnityEngine;
 
 public class LevelInitState : IGameState
 {
@@ -15,13 +14,11 @@ public class LevelInitState : IGameState
 
     public void EnterState()
     {
-        var level = Object.Instantiate(_levelPrefab);
+        var level = GameObject.Instantiate(_levelPrefab);
         var enemyFactory = new MonsterFactory(_enemyPrefab, level.endPointlevel);
         ServiceLocator.Instance.RegisterService<IEnemyFactory>(enemyFactory);
+        level.Init();
     }
 
-    public void ExitState()
-    {
-        throw new NotImplementedException();
-    }
+    public void ExitState(){}
 }

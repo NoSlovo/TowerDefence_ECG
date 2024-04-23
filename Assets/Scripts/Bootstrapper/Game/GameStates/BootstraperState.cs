@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 
 public class BootstraperState : IGameState
 {
@@ -20,6 +20,6 @@ public class BootstraperState : IGameState
 
     public void ExitState()
     {
-        throw new NotImplementedException();
+        throw new System.NotImplementedException();
     }
 }

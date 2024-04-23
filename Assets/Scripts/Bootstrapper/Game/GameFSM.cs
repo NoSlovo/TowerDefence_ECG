@@ -26,7 +26,7 @@ public class GameFSM : MonoBehaviour, IGameFSM
     }
 
 
-    public void EnterState<T>() where T : IGameState
+    public void EnterState<T>() where T : IEnterGameState
     {
         _lastState?.ExitState();
         var gameState = _gameStates[typeof(T)];

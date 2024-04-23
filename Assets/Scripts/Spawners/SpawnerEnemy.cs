@@ -5,9 +5,7 @@ using UnityEngine;
 public class SpawnerEnemy : MonoBehaviour
 {
     [SerializeField] private float m_interval = 3;
-    [SerializeField] private Transform m_moveTarget;
 
-    private float m_lastSpawn = -1;
     private bool _spawnerWork = false;
 
     private IEnemyFactory _enemyFactory => ServiceLocator.Instance.GetService<IEnemyFactory>();
@@ -15,7 +13,7 @@ public class SpawnerEnemy : MonoBehaviour
     public void Init()
     {
         _spawnerWork = true;
-        StartCoroutine(SpawnEnemy()); 
+        StartCoroutine(SpawnEnemy());
     }
 
     private IEnumerator SpawnEnemy()
@@ -29,7 +27,7 @@ public class SpawnerEnemy : MonoBehaviour
 
     private void CreateMonster()
     {
-        var Enemy = _enemyFactory.Create();
-        Enemy.MovementComponent.SetMovePoint(m_moveTarget);
+        var monster = _enemyFactory.Create();
+        monster.transform.position = transform.position;
     }
 }
