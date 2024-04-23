@@ -1,0 +1,769 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.22f1 (e1a7f79fd887) revision 14788599'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19045.4291; Version 2009; 64bit' Language: 'ru' Physical Memory: 16316 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+E:\Engine\2020.3.22f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/limil/Desktop/TowerDefence_ECG_2022.3.22f1/TowerDefence_ECG
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+51049
+Successfully changed project path to: C:/Users/limil/Desktop/TowerDefence_ECG_2022.3.22f1/TowerDefence_ECG
+C:/Users/limil/Desktop/TowerDefence_ECG_2022.3.22f1/TowerDefence_ECG
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 48.40 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.22f1 (e1a7f79fd887)
+[Subsystems] Discovering subsystems at path E:/Engine/2020.3.22f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/limil/Desktop/TowerDefence_ECG_2022.3.22f1/TowerDefence_ECG/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2060 (ID=0x1f08)
+    Vendor:   
+    VRAM:     5969 MB
+    Driver:   31.0.15.4601
+Initialize mono
+Mono path[0] = 'E:/Engine/2020.3.22f1/Editor/Data/Managed'
+Mono path[1] = 'E:/Engine/2020.3.22f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'E:/Engine/2020.3.22f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56736
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: E:/Engine/2020.3.22f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: E:/Engine/2020.3.22f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001466 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 46.65 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.886 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1887ms)
+		BeginReloadAssembly (44ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (395ms)
+			LoadAssemblies (43ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (121ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (32ms)
+			SetupLoadedEditorAssemblies (158ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (47ms)
+				BeforeProcessingInitializeOnLoad (11ms)
+				ProcessInitializeOnLoadAttributes (72ms)
+				ProcessInitializeOnLoadMethodAttributes (23ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.004659 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 48.85 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.047 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1048ms)
+		BeginReloadAssembly (127ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (17ms)
+		EndReloadAssembly (866ms)
+			LoadAssemblies (81ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (275ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (58ms)
+			SetupLoadedEditorAssemblies (333ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (49ms)
+				BeforeProcessingInitializeOnLoad (82ms)
+				ProcessInitializeOnLoadAttributes (186ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.58 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2870 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 136.8 MB.
+System memory in use after: 137.0 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 3306.
+Total: 3.406600 ms (FindLiveObjects: 0.305100 ms CreateObjectMapping: 0.073200 ms MarkObjects: 2.934200 ms  DeleteObjects: 0.092700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Settings/URP-HighFidelity.asset
+  artifactKey: Guid(7b7fd9122c28c4d15b667c7040e3b3fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Settings/URP-HighFidelity.asset using Guid(7b7fd9122c28c4d15b667c7040e3b3fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcff8c618e8f43aed7e632e2b0413a23') in 0.098927 seconds 
+  Import took 0.103505 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/Settings/URP-Performant.asset
+  artifactKey: Guid(d0e2fc18fe036412f8223b3b3d9ad574) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Settings/URP-Performant.asset using Guid(d0e2fc18fe036412f8223b3b3d9ad574) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bf3526a4a4c91dd9481419f7fa82daa') in 0.022373 seconds 
+  Import took 0.027000 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/Settings/URP-Balanced.asset
+  artifactKey: Guid(e1260c1148f6143b28bae5ace5e9c5d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Settings/URP-Balanced.asset using Guid(e1260c1148f6143b28bae5ace5e9c5d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dcb1b073dddc0e868fda05ba5654d24') in 0.019289 seconds 
+  Import took 0.024018 seconds .
+
+========================================================================
+Received Prepare
+Switching render pipeline 00000000000000000000000000000000 -> e1260c1148f6143b28bae5ace5e9c5d1
+Refreshing native plugins compatible for Editor in 3.30 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 61 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 74.6 MB.
+System memory in use after: 74.9 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3358.
+Total: 3.382000 ms (FindLiveObjects: 0.271900 ms CreateObjectMapping: 0.069500 ms MarkObjects: 3.025900 ms  DeleteObjects: 0.014000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 78.881560 seconds.
+  path: Assets/Origin/Meshes/Weapons/Materials/Cannon.mat
+  artifactKey: Guid(6b6f0151e3f952d4d8f0a5889e9c6c7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Origin/Meshes/Weapons/Materials/Cannon.mat using Guid(6b6f0151e3f952d4d8f0a5889e9c6c7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46fd1a7446f32ab13c75e6a469de2117') in 0.161720 seconds 
+  Import took 0.166174 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/Origin/2D&Effect/Particles/Materials/Fire01.mat
+  artifactKey: Guid(11ba1834537a70b42be0411aa4f3eaa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Origin/2D&Effect/Particles/Materials/Fire01.mat using Guid(11ba1834537a70b42be0411aa4f3eaa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff4d33b4629b3ea41de3cc268db57f28') in 0.039184 seconds 
+  Import took 0.042812 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-LightItalic.ttf
+  artifactKey: Guid(5e63515167650a541b309ba3bfd4db3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-LightItalic.ttf using Guid(5e63515167650a541b309ba3bfd4db3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c85f6a5da9c103059a078e3704f7202d') in 0.028774 seconds 
+  Import took 0.032465 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/Materials/CannonBall.mat
+  artifactKey: Guid(1108708a116a2f94bac7dd7d949e1eaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/CannonBall.mat using Guid(1108708a116a2f94bac7dd7d949e1eaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ac2e35f0d8e7721663c38836660aea2') in 0.022038 seconds 
+  Import took 0.025976 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Thin.ttf
+  artifactKey: Guid(19a9abb883540be48b75b951a927ae03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Thin.ttf using Guid(19a9abb883540be48b75b951a927ae03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f826831bba1cbd629a73ee77328ad50') in 0.014512 seconds 
+  Import took 0.018306 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/Origin/2D&Effect/Particles/Materials/Smoke.mat
+  artifactKey: Guid(2475853f95fd89a459402955771a1853) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Origin/2D&Effect/Particles/Materials/Smoke.mat using Guid(2475853f95fd89a459402955771a1853) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa6c70d7b6149c664b1b654d3dcd00a1') in 0.012630 seconds 
+  Import took 0.016892 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/Origin/2D&Effect/Particles/Materials/Lightning01.mat
+  artifactKey: Guid(fde55ed78859c454c9cc7f1607c21f0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Origin/2D&Effect/Particles/Materials/Lightning01.mat using Guid(fde55ed78859c454c9cc7f1607c21f0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54087816fa7b0e406655ef78e47e10d3') in 0.013112 seconds 
+  Import took 0.017333 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-BlackItalic.ttf
+  artifactKey: Guid(f95147a9bab9fe649b8070170fa7ebd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-BlackItalic.ttf using Guid(f95147a9bab9fe649b8070170fa7ebd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3da7b9561e368dc4ba46b3b61c3ed45') in 0.013982 seconds 
+  Import took 0.018184 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/Origin/Standard Assets/Environment/Water/Water4/Materials/OceanPlaneMaterial.mat
+  artifactKey: Guid(a437a9b380909fa4d98f929428f70388) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Origin/Standard Assets/Environment/Water/Water4/Materials/OceanPlaneMaterial.mat using Guid(a437a9b380909fa4d98f929428f70388) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba8785c376ded2f897a0c23f8035a34e') in 0.013291 seconds 
+  Import took 0.017162 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/ParticlesUnlit.mat
+  artifactKey: Guid(e823cd5b5d27c0f4b8256e7c12ee3e6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/ParticlesUnlit.mat using Guid(e823cd5b5d27c0f4b8256e7c12ee3e6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4a59f68c0bae5d5296d1b2b37b819e6') in 0.013239 seconds 
+  Import took 0.016977 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/Origin/Standard Assets/Environment/Water/Water/Materials/WaterProNighttime.mat
+  artifactKey: Guid(e633a20421c47426aa04444234225b69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Origin/Standard Assets/Environment/Water/Water/Materials/WaterProNighttime.mat using Guid(e633a20421c47426aa04444234225b69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5cfc66f45921577f57eeee8e1dc8f05') in 0.014226 seconds 
+  Import took 0.018078 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/Origin/Standard Assets/Environment/Water (Basic)/Materials/WaterBasicDaytime.mat
+  artifactKey: Guid(52b7d70b1de7c4ce09662b77c14d9fda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Origin/Standard Assets/Environment/Water (Basic)/Materials/WaterBasicDaytime.mat using Guid(52b7d70b1de7c4ce09662b77c14d9fda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9d6f8f4b147ee00656cd5089c89f639') in 0.012979 seconds 
+  Import took 0.016833 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/Origin/Standard Assets/Environment/Water/Water4/Materials/Water4Advanced.mat
+  artifactKey: Guid(a5f2339f242f6cc41a982ec55ea3c201) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Origin/Standard Assets/Environment/Water/Water4/Materials/Water4Advanced.mat using Guid(a5f2339f242f6cc41a982ec55ea3c201) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader properties can't be added to this global property sheet. Trying to add _RefractionTex (type 3 count 1)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit_Internal ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit ()
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) (at Library/PackageCache/com.unity.render-pipelines.universal@10.7.0/Runtime/UniversalRenderPipeline.cs:400)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at Library/PackageCache/com.unity.render-pipelines.universal@10.7.0/Runtime/UniversalRenderPipeline.cs:300)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at Library/PackageCache/com.unity.render-pipelines.universal@10.7.0/Runtime/UniversalRenderPipeline.cs:255)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.MaterialEditor:DoRenderPreview (UnityEditor.PreviewRenderUtility,bool)
+UnityEditor.MaterialEditor:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Runtime/Shaders/ShaderPropertySheet.cpp line 169]
+
+Shader properties can't be added to this global property sheet. Trying to add _RefractionTex_ST (type 1 count 1)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit_Internal ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit ()
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) (at Library/PackageCache/com.unity.render-pipelines.universal@10.7.0/Runtime/UniversalRenderPipeline.cs:400)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at Library/PackageCache/com.unity.render-pipelines.universal@10.7.0/Runtime/UniversalRenderPipeline.cs:300)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at Library/PackageCache/com.unity.render-pipelines.universal@10.7.0/Runtime/UniversalRenderPipeline.cs:255)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.MaterialEditor:DoRenderPreview (UnityEditor.PreviewRenderUtility,bool)
+UnityEditor.MaterialEditor:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Runtime/Shaders/ShaderPropertySheet.cpp line 169]
+
+Shader properties can't be added to this global property sheet. Trying to add _RefractionTex_TexelSize (type 1 count 1)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit_Internal ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit ()
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) (at Library/PackageCache/com.unity.render-pipelines.universal@10.7.0/Runtime/UniversalRenderPipeline.cs:400)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at Library/PackageCache/com.unity.render-pipelines.universal@10.7.0/Runtime/UniversalRenderPipeline.cs:300)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at Library/PackageCache/com.unity.render-pipelines.universal@10.7.0/Runtime/UniversalRenderPipeline.cs:255)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.MaterialEditor:DoRenderPreview (UnityEditor.PreviewRenderUtility,bool)
+UnityEditor.MaterialEditor:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Runtime/Shaders/ShaderPropertySheet.cpp line 169]
+
+Shader properties can't be added to this global property sheet. Trying to add _RefractionTex_HDR (type 1 count 1)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit_Internal ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit ()
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) (at Library/PackageCache/com.unity.render-pipelines.universal@10.7.0/Runtime/UniversalRenderPipeline.cs:400)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at Library/PackageCache/com.unity.render-pipelines.universal@10.7.0/Runtime/UniversalRenderPipeline.cs:300)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at Library/PackageCache/com.unity.render-pipelines.universal@10.7.0/Runtime/UniversalRenderPipeline.cs:255)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.MaterialEditor:DoRenderPreview (UnityEditor.PreviewRenderUtility,bool)
+UnityEditor.MaterialEditor:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Runtime/Shaders/ShaderPropertySheet.cpp line 169]
+
+ -> (artifact id: '59c9c40818a94e76db75763ba4110c65') in 0.014230 seconds 
+  Import took 0.018146 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-MediumItalic.ttf
+  artifactKey: Guid(d93c1bc57fdf1ac4dad1bf04fac05464) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-MediumItalic.ttf using Guid(d93c1bc57fdf1ac4dad1bf04fac05464) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57df70c3a2271503257ff890cee385b9') in 0.013955 seconds 
+  Import took 0.017710 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000215 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/TerrainLit.mat
+  artifactKey: Guid(594ea882c5a793440b60ff72d896021e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/TerrainLit.mat using Guid(594ea882c5a793440b60ff72d896021e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8c5ecbab5189b0cede08f50c921464f') in 0.300230 seconds 
+  Import took 0.303945 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/Origin/Standard Assets/Environment/Water/Water/Materials/WaterProDaytime.mat
+  artifactKey: Guid(7350b65a6431f604a8496c39db1ac9c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Origin/Standard Assets/Environment/Water/Water/Materials/WaterProDaytime.mat using Guid(7350b65a6431f604a8496c39db1ac9c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bea5cd130122338f839604e9a9397833') in 0.012430 seconds 
+  Import took 0.016135 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Bold.ttf
+  artifactKey: Guid(3750c318f40cab44a97d3a81beaefeb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Bold.ttf using Guid(3750c318f40cab44a97d3a81beaefeb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ec39d0e89a170f23fdbd689002026a1') in 0.014153 seconds 
+  Import took 0.017886 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Unlit-Default.mat
+  artifactKey: Guid(9dfc825aed78fcd4ba02077103263b40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Unlit-Default.mat using Guid(9dfc825aed78fcd4ba02077103263b40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dcfbc647206071104c4c64bc97b7426') in 0.032956 seconds 
+  Import took 0.036683 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/Origin/Standard Assets/Environment/Water (Basic)/Materials/WaterDefault.mat
+  artifactKey: Guid(30abebfd9bf1c49d8a2d26e61e66bc15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Origin/Standard Assets/Environment/Water (Basic)/Materials/WaterDefault.mat using Guid(30abebfd9bf1c49d8a2d26e61e66bc15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e7ff73d01aa77a07b3ca494162cf357') in 0.012563 seconds 
+  Import took 0.016759 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/Origin/Standard Assets/Environment/Water/Water/Materials/WaterPlaneMaterial.mat
+  artifactKey: Guid(f1bc741ea0e69a241896582ddb633d55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Origin/Standard Assets/Environment/Water/Water/Materials/WaterPlaneMaterial.mat using Guid(f1bc741ea0e69a241896582ddb633d55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c687f5e1bb9f629bc57eb50b6a32438b') in 0.013299 seconds 
+  Import took 0.017649 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000202 seconds.
+  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Italic.ttf
+  artifactKey: Guid(c839255fc8f6b4b4d90bf8c1af9f9bd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Italic.ttf using Guid(c839255fc8f6b4b4d90bf8c1af9f9bd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0da1176970667d793bf5425333f1f5fe') in 0.013765 seconds 
+  Import took 0.018003 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/SimpleLit.mat
+  artifactKey: Guid(6a1143ee683302f4aa628c052723efc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/SimpleLit.mat using Guid(6a1143ee683302f4aa628c052723efc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '232022d424d6155db230a5027de18d78') in 0.206455 seconds 
+  Import took 0.210224 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-ThinItalic.ttf
+  artifactKey: Guid(b2ea3b3f1765e544b9eb5bd1a93a91ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-ThinItalic.ttf using Guid(b2ea3b3f1765e544b9eb5bd1a93a91ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4684c3c0e1c07a433b2c0c92b9b446aa') in 0.013723 seconds 
+  Import took 0.018005 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Origin/Meshes/Towers/Materials/Tower_A.mat
+  artifactKey: Guid(532f1d8aa09ce5c45805ef0db2c483af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Origin/Meshes/Towers/Materials/Tower_A.mat using Guid(532f1d8aa09ce5c45805ef0db2c483af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc8a6b0f3f78b63889c769d382a7ebf9') in 0.014700 seconds 
+  Import took 0.018424 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Black.ttf
+  artifactKey: Guid(1062c701058745940ae5dca6219c64c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Black.ttf using Guid(1062c701058745940ae5dca6219c64c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fdd6a2fa6c26370cb9fdce9ca54f10c') in 0.014161 seconds 
+  Import took 0.017833 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000277 seconds.
+  path: Assets/Origin/2D&Effect/Particles/Materials/Mist.mat
+  artifactKey: Guid(837a619fff9f684439976c1899ca0350) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Origin/2D&Effect/Particles/Materials/Mist.mat using Guid(837a619fff9f684439976c1899ca0350) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80031421ff9d4cdb10b5702a315e18a1') in 0.012269 seconds 
+  Import took 0.016546 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/Origin/Standard Assets/Environment/Water (Basic)/Materials/WaterBasicNighttime.mat
+  artifactKey: Guid(c55afdc4a8a3b4890b07cc7d176510bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Origin/Standard Assets/Environment/Water (Basic)/Materials/WaterBasicNighttime.mat using Guid(c55afdc4a8a3b4890b07cc7d176510bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd36de39562fc446e679b570780986ad8') in 0.012432 seconds 
+  Import took 0.016729 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/Origin/2D&Effect/Particles/Materials/Sparkles01.mat
+  artifactKey: Guid(2bd3023eee033a442946692b395127fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Origin/2D&Effect/Particles/Materials/Sparkles01.mat using Guid(2bd3023eee033a442946692b395127fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e96c333d18364a227bec3f5e46a03154') in 0.013072 seconds 
+  Import took 0.017401 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Regular.ttf
+  artifactKey: Guid(30dc370b164eefc43b95744fc796dad0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Regular.ttf using Guid(30dc370b164eefc43b95744fc796dad0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ea6bd98fd02a466cae5e83c49195fbb') in 0.013801 seconds 
+  Import took 0.017520 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Lit-Default.mat
+  artifactKey: Guid(a97c105638bdf8b4a8650670310a4cd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Lit-Default.mat using Guid(a97c105638bdf8b4a8650670310a4cd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b811bd8bf4a2023be37c1378765f1bf8') in 0.012744 seconds 
+  Import took 0.017430 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/Origin/Standard Assets/Environment/Water/Water4/Materials/Water4Simple.mat
+  artifactKey: Guid(656fde119942645aa8e062e04c119aa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Origin/Standard Assets/Environment/Water/Water4/Materials/Water4Simple.mat using Guid(656fde119942645aa8e062e04c119aa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader properties can't be added to this global property sheet. Trying to add _RefractionTex (type 3 count 1)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit_Internal ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit ()
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) (at Library/PackageCache/com.unity.render-pipelines.universal@10.7.0/Runtime/UniversalRenderPipeline.cs:400)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at Library/PackageCache/com.unity.render-pipelines.universal@10.7.0/Runtime/UniversalRenderPipeline.cs:300)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at Library/PackageCache/com.unity.render-pipelines.universal@10.7.0/Runtime/UniversalRenderPipeline.cs:255)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.MaterialEditor:DoRenderPreview (UnityEditor.PreviewRenderUtility,bool)
+UnityEditor.MaterialEditor:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Runtime/Shaders/ShaderPropertySheet.cpp line 169]
+
+Shader properties can't be added to this global property sheet. Trying to add _RefractionTex_ST (type 1 count 1)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit_Internal ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit ()
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) (at Library/PackageCache/com.unity.render-pipelines.universal@10.7.0/Runtime/UniversalRenderPipeline.cs:400)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at Library/PackageCache/com.unity.render-pipelines.universal@10.7.0/Runtime/UniversalRenderPipeline.cs:300)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at Library/PackageCache/com.unity.render-pipelines.universal@10.7.0/Runtime/UniversalRenderPipeline.cs:255)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.MaterialEditor:DoRenderPreview (UnityEditor.PreviewRenderUtility,bool)
+UnityEditor.MaterialEditor:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Runtime/Shaders/ShaderPropertySheet.cpp line 169]
+
+Shader properties can't be added to this global property sheet. Trying to add _RefractionTex_TexelSize (type 1 count 1)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit_Internal ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit ()
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) (at Library/PackageCache/com.unity.render-pipelines.universal@10.7.0/Runtime/UniversalRenderPipeline.cs:400)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at Library/PackageCache/com.unity.render-pipelines.universal@10.7.0/Runtime/UniversalRenderPipeline.cs:300)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at Library/PackageCache/com.unity.render-pipelines.universal@10.7.0/Runtime/UniversalRenderPipeline.cs:255)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.MaterialEditor:DoRenderPreview (UnityEditor.PreviewRenderUtility,bool)
+UnityEditor.MaterialEditor:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Runtime/Shaders/ShaderPropertySheet.cpp line 169]
+
+Shader properties can't be added to this global property sheet. Trying to add _RefractionTex_HDR (type 1 count 1)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit_Internal ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit ()
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) (at Library/PackageCache/com.unity.render-pipelines.universal@10.7.0/Runtime/UniversalRenderPipeline.cs:400)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at Library/PackageCache/com.unity.render-pipelines.universal@10.7.0/Runtime/UniversalRenderPipeline.cs:300)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]) (at Library/PackageCache/com.unity.render-pipelines.universal@10.7.0/Runtime/UniversalRenderPipeline.cs:255)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[])
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.MaterialEditor:DoRenderPreview (UnityEditor.PreviewRenderUtility,bool)
+UnityEditor.MaterialEditor:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Runtime/Shaders/ShaderPropertySheet.cpp line 169]
+
+ -> (artifact id: '237d4d0a89675ec53aed59451868324e') in 0.015272 seconds 
+  Import took 0.019727 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000267 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/Lit.mat
+  artifactKey: Guid(31321ba15b8f8eb4c954353edc038b1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/Lit.mat using Guid(31321ba15b8f8eb4c954353edc038b1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4adfac816c5c77a0cd3154b03305688b') in 0.012059 seconds 
+  Import took 0.017446 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Medium.ttf
+  artifactKey: Guid(a51a3aebb43ac044989270407476b208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Medium.ttf using Guid(a51a3aebb43ac044989270407476b208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2312dafffad6daf9f8cf32543aa4b8c3') in 0.013559 seconds 
+  Import took 0.017728 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Fonts/Perfect DOS VGA 437.ttf
+  artifactKey: Guid(74a5091d8707f334b9a5c31ef71a64ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.core/Runtime/Debugging/Prefabs/Fonts/Perfect DOS VGA 437.ttf using Guid(74a5091d8707f334b9a5c31ef71a64ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bde5e430ff94ffff6174a1eaa8468ec') in 0.013791 seconds 
+  Import took 0.017767 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Light.ttf
+  artifactKey: Guid(2a29e27936eb547458f646f71125b264) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Light.ttf using Guid(2a29e27936eb547458f646f71125b264) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffc0f5a39022878204614c84997b9bde') in 0.013612 seconds 
+  Import took 0.017428 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000261 seconds.
+  path: Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-BoldItalic.ttf
+  artifactKey: Guid(dfb97a9307a577a41bcacba34b9a7e32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-BoldItalic.ttf using Guid(dfb97a9307a577a41bcacba34b9a7e32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '604457a832619d8feccf505ab5935ed4') in 0.014531 seconds 
+  Import took 0.018871 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/Origin/Meshes/Weapons/Materials/Crystal_Halo.mat
+  artifactKey: Guid(6c00640115a6ce84caaeab8986eaeb9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Origin/Meshes/Weapons/Materials/Crystal_Halo.mat using Guid(6c00640115a6ce84caaeab8986eaeb9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e818c3544dae9b632041005ba6ce151d') in 0.013656 seconds 
+  Import took 0.017547 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.462435 seconds.
+  path: Assets/Origin/Meshes/Weapons/Materials
+  artifactKey: Guid(170edf9f2646f1b4c815c27b9422ee5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Origin/Meshes/Weapons/Materials using Guid(170edf9f2646f1b4c815c27b9422ee5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '611287e8f5e609a21838b9287d63d083') in 0.006855 seconds 
+  Import took 0.011037 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 55.256951 seconds.
+  path: Assets/TutorialInfo/Icons/URP.png
+  artifactKey: Guid(727a75301c3d24613a3ebcec4a24c2c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TutorialInfo/Icons/URP.png using Guid(727a75301c3d24613a3ebcec4a24c2c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6e0cd11f33c7a8eb1ff9edf7330363a') in 0.044883 seconds 
+  Import took 0.049114 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 54.324719 seconds.
+  path: Assets/Origin/2D&Effect/Shader/CrystalHalo.shader
+  artifactKey: Guid(ce13bbd8492e1984187959201a94d247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Origin/2D&Effect/Shader/CrystalHalo.shader using Guid(ce13bbd8492e1984187959201a94d247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5dbfdc5eb7020f8e43d61567372a01dc') in 0.008084 seconds 
+  Import took 0.012288 seconds .
+
+========================================================================
+Received Prepare
+Switching render pipeline 00000000000000000000000000000000 -> e1260c1148f6143b28bae5ace5e9c5d1
+Refreshing native plugins compatible for Editor in 3.21 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 78.8 MB.
+System memory in use after: 79.0 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 3473.
+Total: 3.792400 ms (FindLiveObjects: 0.308100 ms CreateObjectMapping: 0.080300 ms MarkObjects: 3.373600 ms  DeleteObjects: 0.029500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:srp/default-shader: 00a0da0d000000000000000000000000 -> 0000e00a000e0de00000e000e0000000
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Switching render pipeline 00000000000000000000000000000000 -> e1260c1148f6143b28bae5ace5e9c5d1
+Refreshing native plugins compatible for Editor in 3.12 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 78.8 MB.
+System memory in use after: 79.0 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 3473.
+Total: 3.739400 ms (FindLiveObjects: 0.302400 ms CreateObjectMapping: 0.078500 ms MarkObjects: 3.346300 ms  DeleteObjects: 0.011200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 195.940051 seconds.
+  path: Assets/Origin/2D&Effect/Shader
+  artifactKey: Guid(f5bdfd0ee36f86d448060e5e6c3d377f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Origin/2D&Effect/Shader using Guid(f5bdfd0ee36f86d448060e5e6c3d377f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e16e1cd385585d830e4766759c4f96fe') in 0.007217 seconds 
+  Import took 0.012337 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 183.118833 seconds.
+  path: Assets/Origin/Meshes/Towers/Materials/NewShaderVariants.shadervariants
+  artifactKey: Guid(e2180cc48f9a9b041ae5a734680b0310) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Origin/Meshes/Towers/Materials/NewShaderVariants.shadervariants using Guid(e2180cc48f9a9b041ae5a734680b0310) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e72985660d01242a1d68a001f326e3ea') in 0.023001 seconds 
+  Import took 0.027649 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.466829 seconds.
+  path: Assets/Origin/Meshes/Towers/Materials
+  artifactKey: Guid(9dc8df98114b81d41862e26be990dc13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Origin/Meshes/Towers/Materials using Guid(9dc8df98114b81d41862e26be990dc13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '255be02a7908937926821b6d499b322f') in 0.007075 seconds 
+  Import took 0.011921 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 86.025214 seconds.
+  path: Assets
+  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42d402b061de3733987d63b9cc3b64de') in 0.006536 seconds 
+  Import took 0.011447 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.562348 seconds.
+  path: Assets/UniversalRenderPipelineAsset.asset
+  artifactKey: Guid(9b97eaecd5d033c4a96f1edb44ced555) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniversalRenderPipelineAsset.asset using Guid(9b97eaecd5d033c4a96f1edb44ced555) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95bee327b92586e39aa3b513b17d4e37') in 0.008975 seconds 
+  Import took 0.013960 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.867114 seconds.
+  path: Assets/UniversalRenderPipelineAsset_Renderer.asset
+  artifactKey: Guid(737ce46a088eb0b4ca97581f991774f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniversalRenderPipelineAsset_Renderer.asset using Guid(737ce46a088eb0b4ca97581f991774f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72dbe437d0fa9527a7450b590822cc07') in 0.008083 seconds 
+  Import took 0.012566 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.137203 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Data/PostProcessData.asset
+  artifactKey: Guid(41439944d30ece34e96484bdb6645b55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Data/PostProcessData.asset using Guid(41439944d30ece34e96484bdb6645b55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38c53be55556f98c1442da25ab3edac0') in 0.007338 seconds 
+  Import took 0.012460 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 249.392184 seconds.
+  path: Assets/Origin/2D&Effect/Shader/CrystalHalo.shader
+  artifactKey: Guid(ce13bbd8492e1984187959201a94d247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Origin/2D&Effect/Shader/CrystalHalo.shader using Guid(ce13bbd8492e1984187959201a94d247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a47f3400547ff1c467076c8d9927fa6') in 0.003710 seconds 
+  Import took 0.009569 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 34.511539 seconds.
+  path: Assets/Origin/2D&Effect/Shader/CrystalHalo.shader
+  artifactKey: Guid(ce13bbd8492e1984187959201a94d247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Origin/2D&Effect/Shader/CrystalHalo.shader using Guid(ce13bbd8492e1984187959201a94d247) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddb02eea1c079d0bd37e020b9fc8034b') in 0.004191 seconds 
+  Import took 0.010776 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 429.238060 seconds.
+  path: Assets/Origin/2D&Effect/Shader/CrestalHalo.shadergraph
+  artifactKey: Guid(c5a74933b71152443ad21fa76de5cd6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Origin/2D&Effect/Shader/CrestalHalo.shadergraph using Guid(c5a74933b71152443ad21fa76de5cd6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '826c9b5eb6e3bd2d8e96e7ed773e4af8') in 0.009407 seconds 
+  Import took 0.014519 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 55.303913 seconds.
+  path: Assets/Origin/2D&Effect/Shader/Crystal.shader
+  artifactKey: Guid(ac5f9d7ef840d7b458fa959e7a25665a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Origin/2D&Effect/Shader/Crystal.shader using Guid(ac5f9d7ef840d7b458fa959e7a25665a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e975fd4ad5658e225b8a5707727e92d') in 0.008603 seconds 
+  Import took 0.013818 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 100.344207 seconds.
+  path: Assets/Origin/2D&Effect/Shader/Crystal.shader
+  artifactKey: Guid(ac5f9d7ef840d7b458fa959e7a25665a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Origin/2D&Effect/Shader/Crystal.shader using Guid(ac5f9d7ef840d7b458fa959e7a25665a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6e81d885534762c89239bca19ca4e84') in 0.004110 seconds 
+  Import took 0.008980 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
