@@ -16,13 +16,8 @@ namespace Spawners.Factory
         public Monster Create()
         {
             var enemy =  Object.Instantiate(_monsterPrefab);
-            enemy.MovementComponent.SetMovePoint(_targetPoint);
+            enemy.MovementComponent.SetMovePoint(_targetPoint.position);
             return enemy;
         }
-    }
-
-    public interface IEnemyFactory : IService
-    {
-       public Monster Create();
     }
 }

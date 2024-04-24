@@ -1,13 +1,23 @@
-﻿using UnityEngine;
+﻿using Tower.Projectiles;
+using UnityEngine;
 
 namespace Tower
 {
-    public class BaseTower : MonoBehaviour
+    public abstract class BaseTower : MonoBehaviour
     {
-        [SerializeField] ShotComponent _shotComponent;
+        [SerializeField] protected ShotComponent<BaseProjectile> ShotComponent;
+        [SerializeField] protected float ShootInterval = 0.5f;
 
-        private float m_lastShotTime = -0.5f;
-	
-        private Monster  _target;
+        protected Monster Target;
+        protected bool IsShooting = false;
+
+
+        public void SetTarget(Monster target)
+        {
+            Target = target;
+            IsShooting = true;
+        }
+
+        public abstract void Shoot();
     }
 }

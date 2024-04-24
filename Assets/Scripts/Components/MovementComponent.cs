@@ -1,24 +1,23 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Components
 {
     public class MovementComponent : MonoBehaviour
     {
         [SerializeField] private float _speed;
-        
+        [SerializeField] private bool _iDestroyOnReach;
+
         private Vector3 _targetPoint;
         public float Speed => _speed;
         private float _reachDistance = 0.3f;
 
         private void Update()
         {
-            if (CheckTargetDistance()) Destroy(gameObject);
+            if (CheckTargetDistance() && _iDestroyOnReach) Destroy(gameObject);
             MoveToTargetPoint();
         }
 
-        public void SetMovePoint(Transform target) => _targetPoint = target.position;
-
+        public void SetMovePoint(Vector3 target) => _targetPoint = target;
 
         private bool CheckTargetDistance()
         {

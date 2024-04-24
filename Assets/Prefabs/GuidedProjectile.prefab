@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 449626}
   - component: {fileID: 12289648}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Halo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,7 +54,7 @@ GameObject:
   - component: {fileID: 469978}
   - component: {fileID: 19859714}
   - component: {fileID: 19992466}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lightning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4829,7 +4829,8 @@ GameObject:
   - component: {fileID: 469626}
   - component: {fileID: 11496340}
   - component: {fileID: 13564084}
-  m_Layer: 0
+  - component: {fileID: 7334674782127957215}
+  m_Layer: 7
   m_Name: GuidedProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4863,9 +4864,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ede9b13d3c9ba44e93b1288960ce0ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_target: {fileID: 0}
-  m_speed: 0.15
-  m_damage: 10
+  _movementComponent: {fileID: 7334674782127957215}
+  Damage: 10
 --- !u!135 &13564084
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4879,3 +4879,17 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7334674782127957215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4b7ad8937434b7b94d675ff1cbf98a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 0.15
+  _iDestroyOnReach: 0
