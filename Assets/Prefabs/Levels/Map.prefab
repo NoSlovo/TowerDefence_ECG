@@ -70,7 +70,7 @@ GameObject:
   m_Layer: 0
   m_Name: ShotPoint
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -82,7 +82,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1410465549850226101}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: 1.326}
+  m_LocalPosition: {x: 0, y: 0, z: 2.051}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5856839141629326291}
@@ -5589,9 +5589,8 @@ MonoBehaviour:
     _projectilePrefab: {fileID: 11464742, guid: 4124357cfe121804f9eea0a690ce3b52, type: 3}
     _shotPoint: {fileID: 5126004619643418993}
   ShootInterval: 0.5
-  ShotPoint: {fileID: 5126004619643418993}
   _turretHead: {fileID: 5856839141629282967}
-  _turnSpeed: 100
+  _turnSpeed: 150
 --- !u!1 &5856839141948833897
 GameObject:
   m_ObjectHideFlags: 0
@@ -5846,7 +5845,6 @@ MonoBehaviour:
     _projectilePrefab: {fileID: 11496340, guid: 83b1bef18dd7ed947ae8f4d857327102, type: 3}
     _shotPoint: {fileID: 3271716783896722565}
   ShootInterval: 0.5
-  ShotPoint: {fileID: 0}
 --- !u!1 &5856839142574805319
 GameObject:
   m_ObjectHideFlags: 0

@@ -4853,8 +4853,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 019f8dc2a5c029b4ba931342c77e6736, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementComponent: {fileID: 4714623949225841299}
-  Damage: 10
 --- !u!114 &4714623949225841299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4862,7 +4860,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123704}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4b7ad8937434b7b94d675ff1cbf98a7, type: 3}
   m_Name: 

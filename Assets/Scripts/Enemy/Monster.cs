@@ -1,14 +1,15 @@
 ﻿using System;
 using Components;
+using Enemy;
 using UnityEngine;
 
-public class Monster : MonoBehaviour, IDamageProvaider
+public class Monster : MonoBehaviour, IPolElement
 {
     [SerializeField] private int _maxHP = 30;
     [SerializeField] private MovementComponent _movementComponent;
     public int HP => _maxHP;
     public float Speed => _movementComponent.Speed;
-    public bool IsAlive { get; private set; }
+    public bool IsAlive { get; set; }
     public event Action OnDead;
 
     public void SwitchActiveState(bool velue)

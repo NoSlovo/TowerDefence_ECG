@@ -1,4 +1,5 @@
-﻿using Spawners.Factory;
+﻿using Enemy;
+using Spawners.Factory;
 
 public class BootstraperState : IGameState
 {
@@ -25,8 +26,8 @@ public class BootstraperState : IGameState
 
     private void RegisterServices()
     {
-        var enemyFactory = new MonsterFactoryPoolPoll(_enemyPrefab, _levelIniter.endPointlevel,20);
-        _serviceLocator.RegisterService<IEnemyFactoryPool>(enemyFactory);
+        var enemyFactory = new EnemyFactoryPool<Monster>(_enemyPrefab, _levelIniter.endPointlevel,20);
+        _serviceLocator.RegisterService<EnemyFactoryPool<Monster>>(enemyFactory);
     }
 
     public void ExitState()

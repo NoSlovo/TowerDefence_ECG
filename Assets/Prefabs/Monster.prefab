@@ -111,7 +111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d6a4b72d7a2ce2499ae88e0b9d9ec41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0.1
   _maxHP: 30
   _movementComponent: {fileID: 7312819338435340828}
 --- !u!114 &7312819338435340828
@@ -126,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b7ad8937434b7b94d675ff1cbf98a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0.01
+  _speed: 0.03
   _iDestroyOnReach: 1
 --- !u!54 &-4101815857497698042
 Rigidbody:
@@ -138,7 +137,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.06
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0

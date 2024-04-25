@@ -1,5 +1,4 @@
 ﻿using System;
-using Components;
 using Tower.Projectiles;
 using UnityEngine;
 
@@ -19,7 +18,7 @@ namespace Tower
                 return;
 
             var projectile = GameObject.Instantiate(_projectilePrefab, _shotPoint.position, Quaternion.identity);
-            projectile.SetTarget(monster.transform);
+            projectile.LaunchToTarget(monster.transform);
         }
     }
 }

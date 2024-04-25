@@ -8,7 +8,7 @@ public class SpawnerEnemy : MonoBehaviour
 
     private bool _spawnerWork = false;
 
-    private IEnemyFactoryPool EnemyFactoryPool => ServiceLocator.Instance.GetService<IEnemyFactoryPool>();
+    private EnemyFactoryPool<Monster> _enemyFactoryPool => ServiceLocator.Instance.GetService<EnemyFactoryPool<Monster>>();
 
     public void Init()
     {
@@ -27,7 +27,7 @@ public class SpawnerEnemy : MonoBehaviour
 
     private void CreateMonster()
     {
-        var monster = EnemyFactoryPool.GetEnemy();
+        var monster = _enemyFactoryPool.GetEnemy();
         monster.transform.position = transform.position;
     }
 }
