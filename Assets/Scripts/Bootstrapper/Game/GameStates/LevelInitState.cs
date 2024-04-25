@@ -1,22 +1,15 @@
-﻿using Spawners.Factory;
-using UnityEngine;
+﻿using LevelInitialaizer;
 
-public class LevelInitState : IGameState
+public class LevelInitState : IGameState 
 {
-    private LevelIniter _levelPrefab;
-    private Monster _enemyPrefab;
+    private ILevelInitializer _levelInitializerComponent;
 
-    public LevelInitState(LevelIniter levelPrefab, Monster enemyPrefab)
+    public LevelInitState(ILevelInitializer levelInitializerComponent)
     {
-        _levelPrefab = levelPrefab;
-        _enemyPrefab = enemyPrefab;
+        _levelInitializerComponent = levelInitializerComponent.LevelPrefab;
     }
 
-    public void EnterState()
-    {
-        var level = GameObject.Instantiate(_levelPrefab);
-        level.Init();
-    }
+    public void EnterState() => _levelInitializerComponent.InitLevel();
 
     public void ExitState(){}
 }

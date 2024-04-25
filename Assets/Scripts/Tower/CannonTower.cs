@@ -15,6 +15,16 @@ namespace Tower
                 RotateTurret(Target.transform.position);
         }
 
+        public override void Shoot()
+        {
+            ShootInterval -= Time.deltaTime;
+            if (ShootInterval <= 0)
+            {
+                ShootInterval = 0.5f;
+                ShotComponent.ShootToTarget(Target.transform);
+            }
+        }
+
         private void RotateTurret(Vector3 targetPosition)
         {
             Vector3 targetVelocity = Target.GetComponent<Rigidbody>().velocity;
@@ -47,16 +57,6 @@ namespace Tower
             Quaternion targetRotation = Quaternion.LookRotation(directionToPredictedPosition);
             angleToTarget = Vector3.Angle(_turretHead.forward, directionToPredictedPosition);
             return targetRotation;
-        }
-
-        public override void Shoot()
-        {
-            ShootInterval -= Time.deltaTime;
-            if (ShootInterval <= 0)
-            {
-                ShootInterval = 0.5f;
-                ShotComponent.ShootToTarget(Target.transform);
-            }
         }
     }
 }

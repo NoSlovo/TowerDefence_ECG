@@ -4,7 +4,6 @@ namespace Tower
 {
     public class ElectricTower : BaseTower
     {
-        
         private void Update()
         {
             if (IsShooting)

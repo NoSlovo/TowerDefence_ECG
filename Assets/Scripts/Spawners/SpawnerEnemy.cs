@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class SpawnerEnemy : MonoBehaviour
 {
-    [SerializeField] private float m_interval = 3;
+    [SerializeField] private float _сreationDelay = 3;
 
     private bool _spawnerWork = false;
 
-    private EnemyFactoryPool<Monster> _enemyFactoryPool => ServiceLocator.Instance.GetService<EnemyFactoryPool<Monster>>();
+    private EnemyFactoryPool<Monster> _enemyFactoryPool =>
+        ServiceLocator.Instance.GetService<EnemyFactoryPool<Monster>>();
 
     public void Init()
     {
@@ -16,11 +17,11 @@ public class SpawnerEnemy : MonoBehaviour
         StartCoroutine(SpawnEnemy());
     }
 
-    private IEnumerator SpawnEnemy()
+    private IEnumerator SpawnEnemy()//TODO : Можно заменить на UniTask для отвязывания от MonoBeheviour
     {
         while (_spawnerWork)
         {
-            yield return new WaitForSeconds(m_interval);
+            yield return new WaitForSeconds(_сreationDelay);
             CreateMonster();
         }
     }

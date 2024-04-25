@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameFSM : MonoBehaviour, IGameFSM
 {
-    [SerializeField] private LevelIniter _levelPrefab;
+    [SerializeField] private LevelInitializerComponent _levelPrefab;
     [SerializeField] private Monster _monster;
 
     private Dictionary<Type, IGameState> _gameStates;
@@ -15,12 +15,12 @@ public class GameFSM : MonoBehaviour, IGameFSM
     {
         _gameStates = new Dictionary<Type, IGameState>()
         {
-            [typeof(BootstraperState)] = new BootstraperState(this, _monster, _levelPrefab),
-            [typeof(LevelInitState)] = new LevelInitState(_levelPrefab, _monster),
+            [typeof(BootstrapState)] = new BootstrapState(this, _monster, _levelPrefab),
+            [typeof(LevelInitState)] = new LevelInitState(_levelPrefab),
         };
     }
 
-    private void Start() => EnterState<BootstraperState>();
+    private void Start() => EnterState<BootstrapState>();
     
     
     public void EnterState<T>() where T : IEnterGameState
