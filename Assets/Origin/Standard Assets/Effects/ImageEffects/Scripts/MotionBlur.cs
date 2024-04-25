@@ -37,7 +37,7 @@ namespace UnityStandardAssets.ImageEffects
         // Called by camera to apply image effect
         void OnRenderImage (RenderTexture source, RenderTexture destination)
         {
-            // Create the accumulation texture
+            // GetEnemy the accumulation texture
             if (accumTexture == null || accumTexture.width != source.width || accumTexture.height != source.height)
             {
                 DestroyImmediate(accumTexture);

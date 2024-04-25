@@ -25,8 +25,8 @@ public class BootstraperState : IGameState
 
     private void RegisterServices()
     {
-        var enemyFactory = new MonsterFactory(_enemyPrefab, _levelIniter.endPointlevel);
-        _serviceLocator.RegisterService<IEnemyFactory>(enemyFactory);
+        var enemyFactory = new MonsterFactoryPoolPoll(_enemyPrefab, _levelIniter.endPointlevel,20);
+        _serviceLocator.RegisterService<IEnemyFactoryPool>(enemyFactory);
     }
 
     public void ExitState()

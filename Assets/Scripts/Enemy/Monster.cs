@@ -1,19 +1,33 @@
-﻿using Components;
+﻿using System;
+using Components;
 using UnityEngine;
 
-public class Monster : MonoBehaviour , IDamageProvaider
+public class Monster : MonoBehaviour, IDamageProvaider
 {
-    [SerializeField] private float _speed  = 0.1f;
-    [SerializeField] private int _maxHP  = 30;
+    [SerializeField] private int _maxHP = 30;
     [SerializeField] private MovementComponent _movementComponent;
-    public MovementComponent MovementComponent => _movementComponent;
     public int HP => _maxHP;
+    public float Speed => _movementComponent.Speed;
+    public bool IsAlive { get; private set; }
+    public event Action OnDead;
+
+    public void SwitchActiveState(bool velue)
+    {
+        IsAlive = velue;
+        gameObject.SetActive(velue);
+    }
+
+    public void SetTarget(Transform target) => _movementComponent.SetMovePoint(target.position);
+
     public void TakeDamage(int damage)
     {
         if (damage > 0)
             _maxHP -= damage;
         if (CheckDead(damage))
-            Destroy(gameObject);
+        {
+            SwitchActiveState(false);
+            OnDead?.Invoke();
+        }
     }
 
     private bool CheckDead(int damage)
@@ -21,19 +35,9 @@ public class Monster : MonoBehaviour , IDamageProvaider
         if (_maxHP < damage)
         {
             _maxHP = 0;
-            Dead();
             return true;
         }
+
         return false;
     }
-
-    private void Dead()
-    {
-        gameObject.SetActive(false);
-    }
-}
-
-public interface IDamageProvaider
-{
-    public void TakeDamage(int damage);
 }
