@@ -4,6 +4,7 @@ namespace Tower
 {
     public class CannonTower : BaseTower
     {
+        [SerializeField] protected ShotComponent<CannonProjectile> ShotComponent;
         [SerializeField] private Transform _turretHead;
         [SerializeField] private float _turnSpeed = 5f;
 
@@ -29,14 +30,14 @@ namespace Tower
         {
             Vector3 targetVelocity = Target.GetComponent<Rigidbody>().velocity;
             Vector3 predictedTargetPosition = PredictPosition(targetPosition, targetVelocity);
-            RotationTurrentHead(predictedTargetPosition);
+            Aiming(predictedTargetPosition);
         }
 
         private Vector3 PredictPosition(Vector3 targetPosition, Vector3 targetVelocity)
             => targetPosition + targetVelocity * Time.deltaTime;
 
 
-        private void RotationTurrentHead(Vector3 targetPosition)
+        private void Aiming(Vector3 targetPosition)
         {
             var targetRotation = GetTargetRotation(targetPosition, out var angleToTarget);
 

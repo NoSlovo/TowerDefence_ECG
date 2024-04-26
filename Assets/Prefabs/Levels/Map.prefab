@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sphereCollider: {fileID: 2394738083313810278}
-  _tower: {fileID: 2830095355622055433}
+  _tower: {fileID: 1289107094395807322}
 --- !u!1 &1410465549850226101
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,7 +493,7 @@ MonoBehaviour:
   _spawnerEnemy: {fileID: 8680080543990860949}
   _towers:
   - {fileID: 1272075890647609689}
-  - {fileID: 2830095355622055433}
+  - {fileID: 1289107094395807322}
 --- !u!1 &5856839141629366537
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,7 +603,6 @@ GameObject:
   - component: {fileID: 5856839141629282967}
   - component: {fileID: 5856839141628486809}
   - component: {fileID: 5856839141627460649}
-  - component: {fileID: 5856839141622908017}
   m_Layer: 0
   m_Name: Cannon_Hub_L2
   m_TagString: Untagged
@@ -675,19 +674,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5856839141622908017
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5856839141629382903}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
-  m_Center: {x: -0.00000008940697, y: 0.9438243, z: -0.007635966}
 --- !u!1 &5856839141629576597
 GameObject:
   m_ObjectHideFlags: 0
@@ -5491,8 +5477,6 @@ GameObject:
   - component: {fileID: 5856839141629289251}
   - component: {fileID: 5856839141628519031}
   - component: {fileID: 5856839141627083507}
-  - component: {fileID: 5856839141622935735}
-  - component: {fileID: 2830095355622055433}
   m_Layer: 0
   m_Name: Cannon_L2
   m_TagString: Untagged
@@ -5565,39 +5549,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5856839141622935735
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5856839141629611465}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
-  m_Center: {x: 0.000000059604645, y: 0.28809088, z: 0.00000011920929}
---- !u!114 &2830095355622055433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5856839141629611465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ed9d54577704397af6a0d41a4b2912f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShotComponent:
-    _projectilePrefab: {fileID: 11464742, guid: 4124357cfe121804f9eea0a690ce3b52, type: 3}
-    _shotPoint: {fileID: 5126004619643418993}
-  ShootInterval: 0.5
-  _attackRange: 8
-  _detectionEnemy: {fileID: 5978214537300987302}
-  _turretHead: {fileID: 5856839141629282967}
-  _turnSpeed: 150
 --- !u!1 &5856839141948833897
 GameObject:
   m_ObjectHideFlags: 0
@@ -5641,7 +5592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbdcd4a28493d6543aa0ab3dec6c1d8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_interval: 3
+  "_\u0441reationDelay": 3
 --- !u!1 &5856839141960254269
 GameObject:
   m_ObjectHideFlags: 0
@@ -5896,6 +5847,7 @@ GameObject:
   - component: {fileID: 5856839143036513699}
   - component: {fileID: 5856839143037554325}
   - component: {fileID: 5856839143033317097}
+  - component: {fileID: 1289107094395807322}
   m_Layer: 0
   m_Name: CannonTower
   m_TagString: Untagged
@@ -5982,6 +5934,26 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 028296a8d113a924fbc1d9ecd8ce3421, type: 3}
+--- !u!114 &1289107094395807322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5856839143039512589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed9d54577704397af6a0d41a4b2912f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShotComponent:
+    _projectilePrefab: {fileID: 11464742, guid: 4124357cfe121804f9eea0a690ce3b52, type: 3}
+    _shotPoint: {fileID: 5126004619643418993}
+  ShootInterval: 0.5
+  _attackRange: 8
+  _detectionEnemy: {fileID: 5978214537300987302}
+  _turretHead: {fileID: 5856839141629282967}
+  _turnSpeed: 150
 --- !u!1 &5856839143083875435
 GameObject:
   m_ObjectHideFlags: 0

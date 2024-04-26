@@ -5,7 +5,6 @@ namespace Tower
 {
     public abstract class BaseTower : MonoBehaviour
     {
-        [SerializeField] protected ShotComponent<BaseProjectile> ShotComponent;
         [SerializeField] protected float ShootInterval = 0.5f;
         [SerializeField] private float _attackRange = 5f;
         [SerializeField] private DetectionEnemy _detectionEnemy;

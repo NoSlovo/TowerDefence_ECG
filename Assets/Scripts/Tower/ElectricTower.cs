@@ -4,6 +4,7 @@ namespace Tower
 {
     public class ElectricTower : BaseTower
     {
+        [SerializeField] protected ShotComponent<GuidedProjectile> ShotComponent;
         private void Update()
         {
             if (IsShooting)
