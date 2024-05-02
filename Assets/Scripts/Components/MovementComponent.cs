@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Components
 {
@@ -17,7 +18,13 @@ namespace Components
             MoveToTargetPoint();
         }
 
-        public void SetMovePoint(Vector3 target) => _targetPoint = target;
+        public void SetMovePoint(Vector3 target)
+        {
+            if (target == Vector3.zero)
+                throw new Exception("Move point cannot be null");
+            
+            _targetPoint = target;
+        }             
 
         private bool CheckTargetDistance()
         {

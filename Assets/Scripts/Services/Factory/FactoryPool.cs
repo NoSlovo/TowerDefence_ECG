@@ -21,7 +21,7 @@ namespace Spawners.Factory
         {
             var polElement = GetDisableElement();
             polElement.SwitchActiveState(true);
-            polElement.TurnedOff += ElementsRemove;
+            polElement.OnTurnedOff += ElementsRemove;
             return polElement;
         }
 
@@ -62,7 +62,7 @@ namespace Spawners.Factory
                 if (!element.IsActive)
                 {
                     element.SwitchActiveState(false);
-                    element.TurnedOff -= ElementsRemove;
+                    element.OnTurnedOff -= ElementsRemove;
                 }
             }
         }

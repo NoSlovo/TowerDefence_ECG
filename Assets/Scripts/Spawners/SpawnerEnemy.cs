@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnerEnemy : MonoBehaviour
 {
     [SerializeField] private float _сreationDelay = 3;
-    [SerializeField] private Transform _targetMove;
+    [SerializeField] private Transform  _endPoint;
     
     private bool _spawnerWork = false;
 
@@ -23,13 +23,14 @@ public class SpawnerEnemy : MonoBehaviour
         while (_spawnerWork)
         {
             yield return new WaitForSeconds(_сreationDelay);
-            CreateMonster();
+            InstanceMonster();
         }
     }
 
-    private void CreateMonster()
+    private void InstanceMonster()
     {
-        var monster = FactoryPool.GetElement();
+        Monster monster = FactoryPool.GetElement();
         monster.transform.position = transform.position;
+        monster.SetMoveTarget(_endPoint);
     }
 }
