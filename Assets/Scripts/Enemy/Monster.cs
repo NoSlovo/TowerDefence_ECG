@@ -7,7 +7,7 @@ public class Monster : MonoBehaviour, IEnemy, IPolElement
 {
     [SerializeField] private MovementComponent _movementComponent;
 
-    private HealthComponent _healthComponent;
+    private HealthComponent _healthComponent = new HealthComponent();
     public int HP => _healthComponent.Value;
     public float Speed => _movementComponent.Speed;
 
@@ -18,9 +18,27 @@ public class Monster : MonoBehaviour, IEnemy, IPolElement
     {
         IsActive = value;
         gameObject.SetActive(value);
+        Unsubscribe();
+    }
+
+    public void SetMoveTarget(Transform target)
+    {
+        _movementComponent.SetMovePoint(target.position);
+        Subscribes();
+    }
+
+
+    private void Subscribes()
+    {
+        _movementComponent.OnReachTarget += SwitchActiveState;
+        _healthComponent.OnDied += SwitchActiveState;
+    }
+
+    private void Unsubscribe()
+    {
+        _movementComponent.OnReachTarget -= SwitchActiveState;
+        _healthComponent.OnDied -= SwitchActiveState;
     }
 
     public void TakeDamage(int damage) => _healthComponent.GetDamage(damage);
-
-    public void SetMoveTarget(Transform target) => _movementComponent.SetMovePoint(target.position);
 }

@@ -60,10 +60,7 @@ namespace Spawners.Factory
             foreach (var element in _poolElements)
             {
                 if (!element.IsActive)
-                {
-                    element.SwitchActiveState(false);
                     element.OnTurnedOff -= ElementsRemove;
-                }
             }
         }
     }

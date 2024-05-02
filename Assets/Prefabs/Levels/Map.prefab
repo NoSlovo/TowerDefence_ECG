@@ -5593,6 +5593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   "_\u0441reationDelay": 3
+  _endPoint: {fileID: 5856839143083875432}
 --- !u!1 &5856839141960254269
 GameObject:
   m_ObjectHideFlags: 0
@@ -5964,7 +5965,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5856839143083875432}
   m_Layer: 0
-  m_Name: Target
+  m_Name: EndPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

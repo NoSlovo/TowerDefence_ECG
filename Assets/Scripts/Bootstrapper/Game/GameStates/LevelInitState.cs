@@ -10,6 +10,5 @@ public class LevelInitState : IGameState
     }
 
     public void EnterState() => _levelInitializerComponent.InitLevel();
-
-    public void ExitState(){}
+    
 }

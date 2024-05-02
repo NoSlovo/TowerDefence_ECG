@@ -6,15 +6,20 @@ namespace Components
     public class MovementComponent : MonoBehaviour
     {
         [SerializeField] private float _speed;
-        [SerializeField] private bool _iDestroyOnReach;
 
         private Vector3 _targetPoint;
+
+        public Action<bool> OnReachTarget;
+
         public float Speed => _speed;
         private float _reachDistance = 0.3f;
 
         private void Update()
         {
-            if (CheckTargetDistance() && _iDestroyOnReach) Destroy(gameObject);
+            bool reach = CheckTargetDistance();
+            
+            if (reach)
+                OnReachTarget?.Invoke(false);
             MoveToTargetPoint();
         }
 
@@ -22,9 +27,9 @@ namespace Components
         {
             if (target == Vector3.zero)
                 throw new Exception("Move point cannot be null");
-            
+
             _targetPoint = target;
-        }             
+        }
 
         private bool CheckTargetDistance()
         {
