@@ -1,7 +1,11 @@
-﻿namespace Enemy
+﻿using System;
+
+namespace Enemy
 {
-    public interface IPolElement : IEnemy,IEnemyMove
+    public interface IPolElement
     {
+        public event Action TurnedOff;
+        public bool IsActive { get; set; }
         public void SwitchActiveState(bool value);
         
     }

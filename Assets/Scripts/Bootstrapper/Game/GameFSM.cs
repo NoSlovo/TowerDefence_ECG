@@ -9,13 +9,11 @@ public class GameFSM : MonoBehaviour, IGameFSM
 
     private Dictionary<Type, IGameState> _gameStates;
 
-    private IGameState _lastState;
-
     private void Awake()
     {
         _gameStates = new Dictionary<Type, IGameState>()
         {
-            [typeof(BootstrapState)] = new BootstrapState(this, _monster, _levelPrefab),
+            [typeof(BootstrapState)] = new BootstrapState(this, _monster),
             [typeof(LevelInitState)] = new LevelInitState(_levelPrefab),
         };
     }
@@ -25,9 +23,7 @@ public class GameFSM : MonoBehaviour, IGameFSM
     
     public void EnterState<T>() where T : IEnterGameState
     {
-        _lastState?.ExitState();
         var gameState = _gameStates[typeof(T)];
         gameState.EnterState();
-        _lastState = gameState;
     }
 }

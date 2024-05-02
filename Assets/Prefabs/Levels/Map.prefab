@@ -5799,12 +5799,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bb73193b9ba40358a41fcf26bccf48b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShotComponent:
-    _projectilePrefab: {fileID: 11496340, guid: 83b1bef18dd7ed947ae8f4d857327102, type: 3}
-    _shotPoint: {fileID: 3271716783896722565}
   ShootInterval: 0.5
   _attackRange: 6
   _detectionEnemy: {fileID: 6598905669800769233}
+  ShotComponent:
+    _projectilePrefab: {fileID: 11496340, guid: 83b1bef18dd7ed947ae8f4d857327102, type: 3}
+    _shotPoint: {fileID: 3271716783896722565}
 --- !u!1 &5856839142574805319
 GameObject:
   m_ObjectHideFlags: 0
@@ -5946,12 +5946,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed9d54577704397af6a0d41a4b2912f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShotComponent:
-    _projectilePrefab: {fileID: 11464742, guid: 4124357cfe121804f9eea0a690ce3b52, type: 3}
-    _shotPoint: {fileID: 5126004619643418993}
   ShootInterval: 0.5
   _attackRange: 8
   _detectionEnemy: {fileID: 5978214537300987302}
+  ShotComponent:
+    _projectilePrefab: {fileID: 11464742, guid: 4124357cfe121804f9eea0a690ce3b52, type: 3}
+    _shotPoint: {fileID: 5126004619643418993}
   _turretHead: {fileID: 5856839141629282967}
   _turnSpeed: 150
 --- !u!1 &5856839143083875435

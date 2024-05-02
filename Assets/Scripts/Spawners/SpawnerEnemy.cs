@@ -5,11 +5,12 @@ using UnityEngine;
 public class SpawnerEnemy : MonoBehaviour
 {
     [SerializeField] private float _сreationDelay = 3;
-
+    [SerializeField] private Transform _targetMove;
+    
     private bool _spawnerWork = false;
 
-    private EnemyFactoryPool<Monster> _enemyFactoryPool =>
-        ServiceLocator.Instance.GetService<EnemyFactoryPool<Monster>>();
+    private FactoryPool<Monster> FactoryPool =>
+        ServiceLocator.Instance.GetService<FactoryPool<Monster>>();
 
     public void Init()
     {
@@ -28,7 +29,7 @@ public class SpawnerEnemy : MonoBehaviour
 
     private void CreateMonster()
     {
-        var monster = _enemyFactoryPool.GetEnemy();
+        var monster = FactoryPool.GetElement();
         monster.transform.position = transform.position;
     }
 }

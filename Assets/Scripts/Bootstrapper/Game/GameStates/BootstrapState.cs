@@ -1,19 +1,16 @@
-﻿using Enemy;
-using Spawners.Factory;
+﻿using Spawners.Factory;
 
 public class BootstrapState : IGameState
 {
     private IGameFSM _gameFsm;
     private Monster _enemyPrefab;
-    private LevelInitializerComponent _levelInitializerComponent;
 
     private static ServiceLocator _serviceLocator; //TODO: можно заменить на DIConteiner для разрешения вопроса прокидывания зависимостей в конструкторы
 
-    public BootstrapState(IGameFSM gameFsm, Monster enemyPrefab, LevelInitializerComponent levelInitializerComponent)
+    public BootstrapState(IGameFSM gameFsm, Monster enemyPrefab)
     {
         _gameFsm = gameFsm;
         _enemyPrefab = enemyPrefab;
-        _levelInitializerComponent = levelInitializerComponent;
     }
 
     public void EnterState()
@@ -26,11 +23,7 @@ public class BootstrapState : IGameState
 
     private void RegisterServices()
     {
-        var enemyFactory = new EnemyFactoryPool<Monster>(_enemyPrefab, _levelInitializerComponent.EndPoint,20);
-        _serviceLocator.RegisterService<EnemyFactoryPool<Monster>>(enemyFactory);
-    }
-
-    public void ExitState()
-    {
+        var enemyFactory = new FactoryPool<Monster>(_enemyPrefab,20);
+        _serviceLocator.RegisterService<FactoryPool<Monster>>(enemyFactory);
     }
 }
