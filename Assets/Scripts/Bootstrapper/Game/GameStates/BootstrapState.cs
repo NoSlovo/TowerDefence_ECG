@@ -18,7 +18,7 @@ public class BootstrapState : IGameState
         ServiceLocator.Init();
         _serviceLocator = ServiceLocator.Instance;
         RegisterServices();
-        _gameFsm.EnterState<LevelInitState>();
+        _gameFsm.EnterState<BuildLevelState>();
     }
 
     private void RegisterServices()
