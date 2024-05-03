@@ -4,15 +4,16 @@ using System.Collections.Generic;
 using Bootstrapper.Game.GameStates;
 using UnityEngine;
 
-public class GameFSM : MonoBehaviour, IGameFSM, ICoroutineRunner
+public class GameFSM :  IGameFSM, ICoroutineRunner
 {
-    [SerializeField] private LevelBuilderComponent _levelPrefab;
-    [SerializeField] private EnemyMovementConfiguration _enemyMovementConfiguration;
-    [SerializeField] private Monster _monster;
+     private LevelBuilderComponent _levelPrefab;
+     private EnemyMovementConfiguration _enemyMovementConfiguration;
+     private Monster _monster;
 
-    private Dictionary<Type, IGameState> _gameStates;
+     private Dictionary<Type, IGameState> _gameStates;
 
-    private void Awake()
+    public GameFSM(LevelBuilderComponent levelPrefab, EnemyMovementConfiguration enemyMovementConfiguration,
+        Monster monster)
     {
         _gameStates = new Dictionary<Type, IGameState>()
         {
@@ -26,14 +27,14 @@ public class GameFSM : MonoBehaviour, IGameFSM, ICoroutineRunner
         };
     }
 
-    private void Start() => EnterState<BootstrapState>();
-
-
     public void EnterState<T>() where T : IEnterGameState
     {
         var gameState = _gameStates[typeof(T)];
         gameState.EnterState();
     }
 
-    public void Run(IEnumerator coroutine) => StartCoroutine(coroutine);
+    public void Run(IEnumerator coroutine)
+    {
+        throw new NotImplementedException();
+    }
 }
