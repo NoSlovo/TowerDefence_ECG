@@ -1,14 +1,16 @@
 ﻿using Bootstrapper.Game.GameStates;
 using LevelInitialaizer;
+using VContainer;
 
 public class BuildLevelState : IGameState
 {
     private IGameFSM _game;
     private ILevelBuilder _levelBuilder;
-
-    public BuildLevelState(ILevelBuilder levelInitializerComponent, IGameFSM game)
+    
+    [Inject]
+    public BuildLevelState(ILevelBuilder levelBuilder, IGameFSM game)
     {
-        _levelBuilder = levelInitializerComponent;
+       this._levelBuilder = levelBuilder;
         _game = game;
     }
 

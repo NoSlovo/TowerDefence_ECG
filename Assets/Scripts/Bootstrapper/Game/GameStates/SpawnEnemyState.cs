@@ -1,23 +1,22 @@
-﻿using UnityEngine;
+﻿using DI;
+using Spawners.Factory;
+using VContainer;
 
 namespace Bootstrapper.Game.GameStates
 {
     public class SpawnEnemyState : IGameState
     {
-        private ICoroutineRunner _runner;
-        private Transform _spawnPoint;
-        private Transform _targetPoint;
         private SpawnerEnemy _spawnerEnemy;
-        public  SpawnEnemyState(ICoroutineRunner runner,Transform spawnPoint,Transform targetPoint)
+
+        public SpawnEnemyState(ProjectContext context)
         {
-            _runner = runner;
-            _spawnPoint = spawnPoint;
-            _targetPoint = targetPoint;
+            _spawnerEnemy = new SpawnerEnemy
+            (
+                context.Container.Resolve<FactoryPool<Monster>>(),
+                context.Container.Resolve<PointsMovement>()
+            );
         }
-        public void EnterState()
-        {
-            _spawnerEnemy = new SpawnerEnemy(_runner, _spawnPoint, _targetPoint);
-            _spawnerEnemy.Init();
-        }
+
+        public void EnterState() => _spawnerEnemy.Init();
     }
 }

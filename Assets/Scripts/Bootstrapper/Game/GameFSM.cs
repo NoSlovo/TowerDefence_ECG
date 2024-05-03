@@ -2,28 +2,19 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Bootstrapper.Game.GameStates;
-using UnityEngine;
+using DI;
+using VContainer;
 
-public class GameFSM :  IGameFSM, ICoroutineRunner
+public class GameFSM : IGameFSM, ICoroutineRunner
 {
-     private LevelBuilderComponent _levelPrefab;
-     private EnemyMovementConfiguration _enemyMovementConfiguration;
-     private Monster _monster;
+    private Dictionary<Type, IGameState> _gameStates;
 
-     private Dictionary<Type, IGameState> _gameStates;
-
-    public GameFSM(LevelBuilderComponent levelPrefab, EnemyMovementConfiguration enemyMovementConfiguration,
-        Monster monster)
+    public GameFSM(ProjectContext projectContext)
     {
         _gameStates = new Dictionary<Type, IGameState>()
         {
-            [typeof(BootstrapState)] = new BootstrapState(this, _monster),
-            [typeof(BuildLevelState)] = new BuildLevelState(_levelPrefab,this),
-            [typeof(SpawnEnemyState)] = new SpawnEnemyState
-            (this,
-                _enemyMovementConfiguration.SpawnPoint,
-                _enemyMovementConfiguration.TargetPoint
-            ),
+            [typeof(BuildLevelState)] = new BuildLevelState(projectContext.Container.Resolve<LevelBuilderComponent>(), this),
+            [typeof(SpawnEnemyState)] = new SpawnEnemyState(projectContext),
         };
     }
 

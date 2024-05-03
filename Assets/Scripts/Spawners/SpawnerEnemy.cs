@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections;
-using Bootstrapper.Game.GameStates;
+using Cysharp.Threading.Tasks;
 using Spawners.Factory;
 using UnityEngine;
 
@@ -11,36 +11,36 @@ public class SpawnerEnemy
     private Transform _endPoint;
 
     private bool _spawnerWork = false;
-    private ICoroutineRunner _coroutineRunner;
 
-    private FactoryPool<Monster> FactoryPool =>
-        ServiceLocator.Instance.GetService<FactoryPool<Monster>>();
+    private FactoryPool<Monster> _factoryPool;
 
-    public SpawnerEnemy(ICoroutineRunner coroutineRunner, Transform spawnPoint, Transform endPoint)
+    public SpawnerEnemy(FactoryPool<Monster> factoryPool, PointsMovement configuration)
     {
-        _coroutineRunner = coroutineRunner;
-        _spawnPoint = spawnPoint;
-        _endPoint = endPoint;
+        _factoryPool = factoryPool;
+        _spawnPoint = configuration.SpawnPoint;
+        _endPoint = configuration.TargetPoint;
     }
 
     public void Init()
     {
         _spawnerWork = true;
-        _coroutineRunner.Run(SpawnEnemy());
+        SpawnEnemy();
     }
 
-    private IEnumerator SpawnEnemy() 
+    private async void SpawnEnemy()
     {
+        var delay = TimeSpan.FromSeconds(_spawnDelay);
+        
         while (_spawnerWork)
         {
-            yield return new WaitForSeconds(_spawnDelay);
+            await UniTask.Delay(delay);
             InstanceMonster();
         }
     }
 
     private void InstanceMonster()
     {
-        Monster monster = FactoryPool.GetElement();
+        Monster monster = _factoryPool.GetElement();
         monster.transform.position = _spawnPoint.position;
         monster.SetMoveTarget(_endPoint);
     }

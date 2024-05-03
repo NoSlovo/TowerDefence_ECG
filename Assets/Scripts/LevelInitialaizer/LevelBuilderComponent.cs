@@ -22,7 +22,7 @@ public class LevelBuilderComponent : MonoBehaviour, ILevelBuilder
         {
             var instanceTower = Instantiate(_towers[i]);
             instanceTower.transform.position = _levelConfig.GetTowerPoint(i);
-            instanceTower.Init();
+            instanceTower.InitTowers();
         }
     }
 
