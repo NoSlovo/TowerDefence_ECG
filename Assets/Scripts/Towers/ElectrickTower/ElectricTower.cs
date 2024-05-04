@@ -1,56 +1,34 @@
-﻿using Components;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Tower
+namespace Towers.ElectrickTower
 {
     public class ElectricTower : BaseTower
     {
-        [SerializeField] private ShotComponent<GuidedProjectile> _shotComponent;
-
-        private Monster _target;
-        private bool _isShooting = false;
-        protected override void Init()
-        {
-            DetectionEnemy.OnDetected += SetTarget;
-        }
-
+        protected override void Init() => DetectionEnemy.OnDetected += SetTarget;
+        
         private void Update()
         {
-            if (_isShooting)
-            {
+            if (IsShooting)
                 Shoot();
-            }
-        }
-
-        protected override void SetTarget(Monster target)
-        {
-            _target = target;
-            _isShooting = true;
         }
 
         protected override void Shoot()
         {
-            if (_shotComponent.CheckAttackDistance(transform, _target.transform, AttackRange))
-                StopShooting();
-
             ShootInterval -= Time.deltaTime;
 
-            if (ShootInterval <= 0 && _isShooting)
+            if (IsShooting)
             {
-                ShootInterval = 0.5f;
-                _shotComponent.ShootToTarget(_target.transform);
+                if (ShotComponent.CheckAttackDistance(transform, Target.transform, AttackRange))
+                    StopShooting();
+
+                if (ShootInterval <= 0)
+                {
+                    ShootInterval = 0.5f;
+                    ShotComponent.ShootToTarget(Target.transform);
+                }
             }
         }
 
-        private void StopShooting()
-        {
-            _target = null;
-            _isShooting = false;
-        }
-
-        private void OnDisable()
-        {
-            DetectionEnemy.OnDetected -= SetTarget;
-        }
+        private void OnDisable() => DetectionEnemy.OnDetected -= SetTarget;
     }
 }

@@ -8,10 +8,10 @@ namespace LevelInitialaizer
     {
         [SerializeField] private List<Transform> _towersSpawnPoints;
 
-        public Vector3 GetTowerPoint(int _pointIndex)
+        public Vector3 GetTowerPoint(int pointIndex)
         {
-            if (_pointIndex <= _towersSpawnPoints.Count)
-                return _towersSpawnPoints[_pointIndex].position;
+            if (pointIndex <= _towersSpawnPoints.Count)
+                return _towersSpawnPoints[pointIndex].position;
             throw new NullReferenceException();
         }
     }

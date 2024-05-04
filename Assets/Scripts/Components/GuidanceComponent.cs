@@ -9,7 +9,7 @@ namespace Components
         private float _angle;
         private float _turnSpeed;
 
-        public bool LookTarget { get; private set; }
+        public bool LookTarget { get; private set; } = false;
 
         public GuidanceComponent(Transform guidanceObject, float angle,float turnSpeed)
         {
@@ -20,9 +20,12 @@ namespace Components
 
         public void RotateTurret(Transform target, Vector3 targetPosition)
         {
-            Vector3 targetVelocity = target.GetComponent<Rigidbody>().velocity;
-            Vector3 predictedTargetPosition = PredictPosition(targetPosition, targetVelocity);
-            Aiming(predictedTargetPosition,_turnSpeed);
+            if (target != null)
+            {
+                Vector3 targetVelocity = target.GetComponent<Rigidbody>().velocity;
+                Vector3 predictedTargetPosition = PredictPosition(targetPosition, targetVelocity);
+                Aiming(predictedTargetPosition,_turnSpeed);
+            }
         }
 
         private Vector3 PredictPosition(Vector3 targetPosition, Vector3 targetVelocity)

@@ -2,7 +2,7 @@
 using Enemy;
 using UnityEngine;
 
-public class Monster : MonoBehaviour, IEnemy, IPolElement
+public class Monster : MonoBehaviour, IEnemy, IPoolElement
 {
     [SerializeField] private MovementComponent _movementComponent;
 

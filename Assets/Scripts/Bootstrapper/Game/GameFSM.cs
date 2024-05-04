@@ -1,11 +1,10 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using Bootstrapper.Game.GameStates;
 using DI;
 using VContainer;
 
-public class GameFSM : IGameFSM, ICoroutineRunner
+public class GameFSM : IGameFSM
 {
     private Dictionary<Type, IGameState> _gameStates;
 
@@ -13,7 +12,7 @@ public class GameFSM : IGameFSM, ICoroutineRunner
     {
         _gameStates = new Dictionary<Type, IGameState>()
         {
-            [typeof(BuildLevelState)] = new BuildLevelState(projectContext.Container.Resolve<LevelBuilderComponent>(), this),
+            [typeof(BuildLevelState)] = new BuildLevelState(projectContext.Container.Resolve<LevelBuilder>(), this),
             [typeof(SpawnEnemyState)] = new SpawnEnemyState(projectContext),
         };
     }
@@ -22,10 +21,5 @@ public class GameFSM : IGameFSM, ICoroutineRunner
     {
         var gameState = _gameStates[typeof(T)];
         gameState.EnterState();
-    }
-
-    public void Run(IEnumerator coroutine)
-    {
-        throw new NotImplementedException();
     }
 }

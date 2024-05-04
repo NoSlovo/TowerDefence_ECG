@@ -11,7 +11,7 @@ namespace DI
     {
         [SerializeField] private Monster _enemyPrefab;
         [SerializeField] private PointsMovement pointsMovement;
-        [SerializeField] private LevelBuilderComponent _levelBuilderComponent;
+        [FormerlySerializedAs("_levelBuilderComponent")] [SerializeField] private LevelBuilder levelBuilder;
 
         private int _enemyCount = 20;
 
@@ -38,7 +38,7 @@ namespace DI
         private void RegisterComponents(IContainerBuilder builder)
         {
             builder.RegisterComponent(pointsMovement);
-            builder.RegisterComponent(_levelBuilderComponent);
+            builder.RegisterComponent(levelBuilder);
         }
     }
 }

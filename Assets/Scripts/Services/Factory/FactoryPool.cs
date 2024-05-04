@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Spawners.Factory
 {
-    public class FactoryPool<T> : IService where T : MonoBehaviour, IPolElement
+    public class FactoryPool<T> : IService where T : MonoBehaviour, IPoolElement
     {
         private T _objectPrefab;
         private Stack<T> _poolElements;

@@ -6,11 +6,11 @@ public class BuildLevelState : IGameState
 {
     private IGameFSM _game;
     private ILevelBuilder _levelBuilder;
-    
-    [Inject]
+
+
     public BuildLevelState(ILevelBuilder levelBuilder, IGameFSM game)
     {
-       this._levelBuilder = levelBuilder;
+        _levelBuilder = levelBuilder;
         _game = game;
     }
 

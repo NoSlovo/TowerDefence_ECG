@@ -6,10 +6,10 @@ namespace Components
     public class MovementComponent : MonoBehaviour
     {
         [SerializeField] private float _speed;
-
+        [SerializeField] private Rigidbody _rigidbody;
         private Vector3 _targetPoint;
-
         public Action<bool> OnReachTarget;
+
 
         public float Speed => _speed;
         private float _reachDistance = 0.3f;
@@ -17,7 +17,7 @@ namespace Components
         private void Update()
         {
             bool reach = CheckTargetDistance();
-            
+
             if (reach)
                 OnReachTarget?.Invoke(false);
             MoveToTargetPoint();
@@ -27,8 +27,8 @@ namespace Components
         {
             if (target == Vector3.zero)
                 throw new Exception("Move point cannot be null");
-
             _targetPoint = target;
+            _rigidbody = GetComponent<Rigidbody>();
         }
 
         private bool CheckTargetDistance()
@@ -41,12 +41,11 @@ namespace Components
 
         private void MoveToTargetPoint()
         {
-            var directionMove = _targetPoint - transform.position;
+            Vector3 direction = _targetPoint - transform.position;
 
-            if (directionMove.magnitude > _speed)
-                directionMove = directionMove.normalized * _speed;
+            direction.Normalize();
 
-            transform.Translate(directionMove);
+            _rigidbody.MovePosition(_rigidbody.position + direction * (_speed * Time.fixedDeltaTime));
         }
     }
 }
