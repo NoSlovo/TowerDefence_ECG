@@ -2,11 +2,11 @@
 
 namespace Towers.EnemyTracker
 {
-    public class EnemyShooter 
+    public class EnemyShooterService 
     {
         private List<BaseTower> _towers;
         
-        public EnemyShooter(List<BaseTower> towers)
+        public EnemyShooterService(List<BaseTower> towers)
         {
             _towers = towers;
         }

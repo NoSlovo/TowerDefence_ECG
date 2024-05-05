@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using Services.Factory;
+using Services.Pool;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
 namespace DI
 {
-    public class ProjectContext : LifetimeScope , ITickComponent
+    public class ProjectContext : LifetimeScope , ITickedServices
     {
         [SerializeField] private Monster _enemyPrefab;
 
@@ -17,7 +17,7 @@ namespace DI
         
         protected override void Configure(IContainerBuilder builder)
         {
-            builder.Register<FactoryPool<Monster>>(Lifetime.Singleton)
+            builder.Register<PoolService<Monster>>(Lifetime.Singleton)
                 .WithParameter(_enemyPrefab)
                 .WithParameter(_defaultValue);
         }
@@ -36,15 +36,5 @@ namespace DI
         {
             _tickServices.Add(service);
         }
-    }
-
-    public interface ITickComponent
-    {
-        public void AddTickService(ITickService service);
-    }
-
-    public interface ITickService
-    {
-        public void Tick();
     }
 }

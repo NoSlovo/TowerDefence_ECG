@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LevelInitialaizer
+namespace LevelBuilder
 {
     [Serializable]
-    public class LevelConfig
+    public struct TowerSpawnConfig
     {
         
         [SerializeField] private List<Transform> _towersSpawnPoints;
 
-        public Vector3 GetTowerPoint(int pointIndex)
+        public Vector3 GetPointInstance(int indexPoint)
         {
-            if (pointIndex <= _towersSpawnPoints.Count)
-                return _towersSpawnPoints[pointIndex].position;
+            if (indexPoint <= _towersSpawnPoints.Count)
+                return _towersSpawnPoints[indexPoint].position;
             throw new NullReferenceException();
         }
     }

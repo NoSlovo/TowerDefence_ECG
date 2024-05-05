@@ -1,5 +1,5 @@
 ﻿using Bootstrapper.Game.GameStates;
-using LevelInitialaizer;
+using LevelBuilder.InterfacesBuilding;
 
 public class BuildLevelState : IGameState
 {

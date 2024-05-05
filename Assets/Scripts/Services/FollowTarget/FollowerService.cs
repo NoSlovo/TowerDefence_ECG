@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 
-
-namespace Components
+namespace Services.FollowTarget
 {
-    public class Follower
+    public class FollowerService
     {
         private Transform _guidanceObject;
         private float _angle;
@@ -12,7 +11,7 @@ namespace Components
         public bool HasLocked { get; private set; } = false;
         private Rigidbody _rb; 
         
-        public Follower(Transform guidanceObject, float angle, float turnSpeed)
+        public FollowerService(Transform guidanceObject, float angle, float turnSpeed)
         {
             _guidanceObject = guidanceObject;
             _angle = angle;

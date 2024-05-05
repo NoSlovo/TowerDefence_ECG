@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace Towers.ElectrickTower
+﻿namespace Towers.ElectrickTower
 {
     public class ElectricTower : BaseTower
     {

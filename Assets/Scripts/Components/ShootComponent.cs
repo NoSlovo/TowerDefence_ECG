@@ -1,5 +1,5 @@
 ﻿using System;
-using Services.Factory;
+using Services.Pool;
 using Towers.Projectiles;
 using UnityEngine;
 
@@ -11,13 +11,13 @@ namespace Components
         [SerializeField] private Projectile _projectilePrefab;
         [SerializeField] private Transform shootPoint;
 
-        private FactoryPool<Projectile> _pool;
+        private PoolService<Projectile> _poolService;
 
         public Transform ShootPoint => shootPoint;
 
         public void Init()
         {
-            _pool = new FactoryPool<Projectile>(_projectilePrefab, 10);
+            _poolService = new PoolService<Projectile>(_projectilePrefab, 10);
         }
 
         public void ShootToTarget(Transform target)
@@ -25,7 +25,7 @@ namespace Components
             if (target == null)
                 return;
 
-            var projectile = _pool.GetElement();
+            var projectile = _poolService.GetElement();
             projectile.transform.position = shootPoint.position;
             projectile.LaunchToTarget(target.transform);
         }

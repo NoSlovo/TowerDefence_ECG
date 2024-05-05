@@ -283,19 +283,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectContext: {fileID: 1028307243}
-  pointsMovement:
-    _spawnPoint: {fileID: 1449251528}
-    _targetPoint: {fileID: 1449251529}
-  levelBuilder:
-    _towers:
+  levelCreator:
+    _towersPrefabs:
     - {fileID: 363520197873165417, guid: 861e5e1744cb32d458e49dbad22c6dbb, type: 3}
     - {fileID: 6868862410804308719, guid: 6506f4683427a4d4fa931af0ab609172, type: 3}
-    _levelConfig:
+    _towerSpawnConfig:
       _towersSpawnPoints:
       - {fileID: 1449251527}
       - {fileID: 1449251526}
     _groundPrefab: {fileID: 5139207044723686893, guid: ebe8ad5a0a7da8246a6eb31517086bd5, type: 3}
-    _groundInstancePoint: {fileID: 1449251525}
+    _groundPointInstance: {fileID: 1449251525}
+    _spawnPoint: {fileID: 1449251528}
+    _targetPoint: {fileID: 1449251529}
 --- !u!1 &840437479
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,6 +478,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4451615544031397, guid: 84d919a9decab334e883ec18a0eeb74c, type: 3}
+      propertyPath: m_Name
+      value: ElectricInstancePoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255454072479577322, guid: 84d919a9decab334e883ec18a0eeb74c, type: 3}
+      propertyPath: m_Name
+      value: CannonrInstancePoint
+      objectReference: {fileID: 0}
     - target: {fileID: 5856839141392468329, guid: 84d919a9decab334e883ec18a0eeb74c, type: 3}
       propertyPath: m_Name
       value: Map

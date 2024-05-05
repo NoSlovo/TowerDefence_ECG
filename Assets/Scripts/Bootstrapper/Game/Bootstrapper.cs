@@ -6,15 +6,14 @@ namespace Bootstrapper.Game
     public class Bootstrapper : MonoBehaviour 
     {
         [SerializeField] private ProjectContext _projectContext;
-        [SerializeField] private PointsMovement pointsMovement;
-        [SerializeField] private LevelBuilder levelBuilder;
+        [SerializeField] private LevelBuilder.LevelCreator levelCreator;
 
-        private GameFSM _game;
+        private GameStateMashine _game;
         
 
         private void Start()
         {
-            _game = new GameFSM(_projectContext, pointsMovement, levelBuilder,_projectContext);
+            _game = new GameStateMashine(_projectContext,  levelCreator,_projectContext);
             _game.EnterState<BuildLevelState>();
             DontDestroyOnLoad(this);
         }

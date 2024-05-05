@@ -1,21 +1,20 @@
 ﻿using System.Collections.Generic;
-using Enemy;
 using Enemy.EnemyInterfaces;
 using UnityEngine;
 
-namespace Services.Factory
+namespace Services.Pool
 {
-    public class FactoryPool<T> where T : MonoBehaviour, IPoolElement
+    public class PoolService<T> where T : MonoBehaviour, IPoolElement
     {
-        private T _objectPrefab;
+        private readonly T _element;
         
-        private Stack<T> _poolElements;
+        private readonly Stack<T> _poolElements;
 
-        public FactoryPool(T objectPrefab, int objectsCount)
+        public PoolService(T element, int sizePool)
         {
-            _objectPrefab = objectPrefab;
-            _poolElements = new Stack<T>(objectsCount);
-            InitPool(objectsCount);
+            _element = element;
+            _poolElements = new Stack<T>(sizePool);
+            Initialize(sizePool);
         }
 
         public T GetElement()
@@ -31,7 +30,7 @@ namespace Services.Factory
             return copy;
         }
 
-        private void InitPool(int countEnemyOnPool)
+        private void Initialize(int countEnemyOnPool)
         {
             for (int i = 0; i < countEnemyOnPool; i++)
             {
@@ -43,7 +42,7 @@ namespace Services.Factory
 
         private T CreateElement()
         {
-            var enemy = Object.Instantiate(_objectPrefab);
+            var enemy = Object.Instantiate(_element);
             enemy.SwitchActiveState(false);
             return enemy;
         }

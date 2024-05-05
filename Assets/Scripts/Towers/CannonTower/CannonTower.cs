@@ -1,21 +1,24 @@
-﻿using System;
-using Components;
-using Enemy;
+﻿using Enemy;
+using Services.FollowTarget;
 using UnityEngine;
 
 namespace Towers.CannonTower
 {
     public class CannonTower : BaseTower
     {
-        [SerializeField] private Transform _turretHead;
-        [SerializeField] private float _turnSpeed = 5f;
+        [SerializeField] private Transform _cannonTransform;
+        [SerializeField] private float _turningSpeed = 150f;
 
-        private Follower _follower;
-
-        private void Start() => _follower = new Follower(_turretHead, _angle, _turnSpeed);
-
+        private FollowerService _followerService;
 
         private float _angle = 10f;
+
+        public override void Initialize()
+        {
+            _followerService = new FollowerService(_cannonTransform, _angle, _turningSpeed);
+            base.Initialize();
+        }
+
 
         private void Update()
         {
@@ -25,11 +28,11 @@ namespace Towers.CannonTower
             FollowTarget();
         }
 
-        private void FollowTarget() => _follower.RotateTurret(Target.Transform.position);
+        private void FollowTarget() => _followerService.RotateTurret(Target.Transform.position);
 
         public override void SetTarget(IEnemy target)
         {
-            _follower.SetTarget(target.Transform);
+            _followerService.SetTarget(target.Transform);
             base.SetTarget(target);
         }
     }
