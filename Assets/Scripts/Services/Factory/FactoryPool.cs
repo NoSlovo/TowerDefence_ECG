@@ -1,14 +1,15 @@
 ﻿using System.Collections.Generic;
 using Enemy;
+using Enemy.EnemyInterfaces;
 using UnityEngine;
 
-namespace Spawners.Factory
+namespace Services.Factory
 {
-    public class FactoryPool<T> : IService where T : MonoBehaviour, IPoolElement
+    public class FactoryPool<T> where T : MonoBehaviour, IPoolElement
     {
         private T _objectPrefab;
+        
         private Stack<T> _poolElements;
-
 
         public FactoryPool(T objectPrefab, int objectsCount)
         {
@@ -19,9 +20,15 @@ namespace Spawners.Factory
 
         public T GetElement()
         {
-            var polElement = GetDisableElement();
-            polElement.SwitchActiveState(true);
-            return polElement;
+            var poolElement = GetDisabledElement();
+            poolElement.SwitchActiveState(true);
+            return poolElement;
+        }
+
+        public Stack<T> GetPoolElements()
+        {
+            var copy = _poolElements;
+            return copy;
         }
 
         private void InitPool(int countEnemyOnPool)
@@ -41,7 +48,7 @@ namespace Spawners.Factory
             return enemy;
         }
 
-        private T GetDisableElement()
+        private T GetDisabledElement()
         {
             foreach (var element in _poolElements)
             {
@@ -49,9 +56,7 @@ namespace Spawners.Factory
                     return element;
             }
 
-            var polElement = CreateElement();
-            _poolElements.Push(polElement);
-            return polElement;
+            return CreateElement();
         }
     }
 }

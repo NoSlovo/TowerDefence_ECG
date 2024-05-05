@@ -102,9 +102,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5856839141392468342}
-  - component: {fileID: 2848384085329875777}
-  - component: {fileID: 2736069716796571215}
-  - component: {fileID: 1692521278008588844}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -132,53 +129,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2848384085329875777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5856839141392468329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9f10f24ea869a742b6aad16d8b594c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _towers:
-  - {fileID: 6868862410804308719, guid: 6506f4683427a4d4fa931af0ab609172, type: 3}
-  - {fileID: 363520197873165417, guid: 861e5e1744cb32d458e49dbad22c6dbb, type: 3}
-  _levelConfig: {fileID: 1692521278008588844}
-  _groundPrefab: {fileID: 5139207044723686893, guid: ebe8ad5a0a7da8246a6eb31517086bd5, type: 3}
-  _groundInstancePoint: {fileID: 8622853729152646630}
---- !u!114 &2736069716796571215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5856839141392468329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f077cc57df07b94dbb79d66fd250357, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spawnPoint: {fileID: 5112054237254929897}
-  _targetPoint: {fileID: 5856839143083875432}
---- !u!114 &1692521278008588844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5856839141392468329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c0a0986abde4368801e3fb280eb3ed3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _towersSpawnPoints:
-  - {fileID: 9133160459046720827}
-  - {fileID: 7143082238093091894}
 --- !u!1 &5856839143083875435
 GameObject:
   m_ObjectHideFlags: 0

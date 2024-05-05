@@ -1,4 +1,6 @@
-﻿using Components;
+﻿using System;
+using Components;
+using Enemy;
 using UnityEngine;
 
 namespace Towers.CannonTower
@@ -8,45 +10,27 @@ namespace Towers.CannonTower
         [SerializeField] private Transform _turretHead;
         [SerializeField] private float _turnSpeed = 5f;
 
-        private GuidanceComponent _guidanceComponent;
+        private Follower _follower;
+
+        private void Start() => _follower = new Follower(_turretHead, _angle, _turnSpeed);
+
+
         private float _angle = 10f;
 
-        protected override void Init()
-        {
-            _guidanceComponent = new GuidanceComponent(_turretHead, _angle, _turnSpeed);
-            DetectionEnemy.OnDetected += SetTarget;
-        }
-        
         private void Update()
         {
-            if (IsShooting)
-                Shoot();
+            if (!HasTarget)
+                return;
+
+            FollowTarget();
         }
 
-        protected override void Shoot()
-        {
-            ShootInterval -= Time.deltaTime;
-            if (IsShooting)
-            {
-                if (ShotComponent.CheckAttackDistance(transform, Target.transform, AttackRange))
-                {
-                    StopShooting();
-                    return;
-                }
-                
-                _guidanceComponent.RotateTurret(Target.transform, Target.transform.position);
-                
-                if (ShootInterval <= 0)
-                {
-                    ShootInterval = 0.5f;
-                    ShotComponent.ShootToTarget(Target.transform);
-                }
-            }
-        }
+        private void FollowTarget() => _follower.RotateTurret(Target.Transform.position);
 
-        private void OnDisable()
+        public override void SetTarget(IEnemy target)
         {
-            DetectionEnemy.OnDetected -= SetTarget;
+            _follower.SetTarget(target.Transform);
+            base.SetTarget(target);
         }
     }
 }

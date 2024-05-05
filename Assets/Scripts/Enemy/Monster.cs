@@ -1,5 +1,7 @@
-﻿using Components;
+﻿using System;
+using Components;
 using Enemy;
+using Enemy.EnemyInterfaces;
 using UnityEngine;
 
 public class Monster : MonoBehaviour, IEnemy, IPoolElement
@@ -8,7 +10,9 @@ public class Monster : MonoBehaviour, IEnemy, IPoolElement
 
     private HealthComponent _healthComponent = new HealthComponent();
 
+    public Action OnUsed { get; set; }
     public bool IsActive { get; set; }
+    public Transform Transform => transform;
 
     public void SwitchActiveState(bool value)
     {

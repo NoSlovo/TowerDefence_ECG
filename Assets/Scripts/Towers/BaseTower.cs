@@ -1,42 +1,53 @@
 ﻿using Components;
-using Towers.TowerDetection;
+using Enemy;
 using UnityEngine;
 
 namespace Towers
 {
-    public abstract class BaseTower : MonoBehaviour 
+    public abstract class BaseTower : MonoBehaviour
     {
-        [SerializeField] protected float ShootInterval = 0.5f;
-        [SerializeField] protected DetectionEnemy DetectionEnemy;
-        [SerializeField] protected float AttackRange = 5f;
-        [SerializeField] protected ShotComponent ShotComponent;
+        [SerializeField] private float reload = 0.5f;
+        [SerializeField] private float attackRange = 5f;
+        [SerializeField] private ShootComponent shooterComponent;
 
-        protected Monster Target;
-        protected bool IsShooting = false;
+        public bool HasTarget => Target != null;
+        public Vector3 Position => transform.position;
+        public float AttackRange => attackRange;
 
-        public virtual void InitTower()
+        protected IEnemy Target;
+
+        private float _currentReloadTime;
+
+        public virtual void Initialize()
         {
-            ShotComponent.Init();
-            Init();
+            shooterComponent.Init();
         }
 
-        protected abstract void Init();
-        
-        protected abstract void Shoot();
-
-
-        protected void SetTarget(Monster monster)
+        public void Shoot()
         {
-            if (Target != null)
+            if (!HasTarget)
                 return;
 
-            Target = monster;
-            IsShooting = true;
+            if (_currentReloadTime > 0)
+            {
+                _currentReloadTime -= Time.deltaTime;
+                return;
+            }
+
+            _currentReloadTime = reload;
+            shooterComponent.ShootToTarget(Target.Transform);
+
+            if (shooterComponent.CheckAttackDistance(transform, Target.Transform, AttackRange))
+                StopShooting();
+        }
+
+        public virtual void SetTarget(IEnemy target)
+        {
+            Target = target;
         }
 
         protected void StopShooting()
         {
-            IsShooting = false;
             Target = null;
         }
     }

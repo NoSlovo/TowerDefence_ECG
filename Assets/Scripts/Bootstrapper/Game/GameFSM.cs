@@ -2,18 +2,17 @@ using System;
 using System.Collections.Generic;
 using Bootstrapper.Game.GameStates;
 using DI;
-using VContainer;
 
 public class GameFSM : IGameFSM
 {
     private Dictionary<Type, IGameState> _gameStates;
 
-    public GameFSM(ProjectContext projectContext)
+    public GameFSM(ProjectContext projectContext, PointsMovement pointsMovement, LevelBuilder levelBuilder, ITickComponent tickComponent)
     {
         _gameStates = new Dictionary<Type, IGameState>()
         {
-            [typeof(BuildLevelState)] = new BuildLevelState(projectContext.Container.Resolve<LevelBuilder>(), this),
-            [typeof(SpawnEnemyState)] = new SpawnEnemyState(projectContext),
+            [typeof(BuildLevelState)] = new BuildLevelState(levelBuilder, this),
+            [typeof(GamePlayState)] = new GamePlayState(projectContext.Container, pointsMovement,levelBuilder,tickComponent),
         };
     }
 

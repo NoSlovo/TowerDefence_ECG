@@ -1,12 +1,10 @@
 ﻿using Bootstrapper.Game.GameStates;
 using LevelInitialaizer;
-using VContainer;
 
 public class BuildLevelState : IGameState
 {
     private IGameFSM _game;
     private ILevelBuilder _levelBuilder;
-
 
     public BuildLevelState(ILevelBuilder levelBuilder, IGameFSM game)
     {
@@ -17,6 +15,6 @@ public class BuildLevelState : IGameState
     public void EnterState()
     {
         _levelBuilder.Build();
-        _game.EnterState<SpawnEnemyState>();
+        _game.EnterState<GamePlayState>();
     }
 }

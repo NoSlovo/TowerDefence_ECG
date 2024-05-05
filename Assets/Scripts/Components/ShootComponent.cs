@@ -1,19 +1,19 @@
 ﻿using System;
-using Spawners.Factory;
+using Services.Factory;
 using Towers.Projectiles;
 using UnityEngine;
 
 namespace Components
 {
     [Serializable]
-    public class ShotComponent
+    public class ShootComponent
     {
         [SerializeField] private Projectile _projectilePrefab;
-        [SerializeField] private Transform _shotPoint;
+        [SerializeField] private Transform shootPoint;
 
         private FactoryPool<Projectile> _pool;
 
-        public Transform ShotPoint => _shotPoint;
+        public Transform ShootPoint => shootPoint;
 
         public void Init()
         {
@@ -26,16 +26,13 @@ namespace Components
                 return;
 
             var projectile = _pool.GetElement();
-            projectile.transform.position = _shotPoint.position;
+            projectile.transform.position = shootPoint.position;
             projectile.LaunchToTarget(target.transform);
         }
 
         public bool CheckAttackDistance(Transform shotObject, Transform target, float AttackRange)
         {
-            if (Vector3.Distance(shotObject.position, target.transform.position) > AttackRange)
-                return true;
-
-            return false;
+            return Vector3.Distance(shotObject.position, target.transform.position) > AttackRange;
         }
     }
 }

@@ -4,8 +4,10 @@ using UnityEngine;
 
 namespace LevelInitialaizer
 {
-    public class LevelConfig : MonoBehaviour
+    [Serializable]
+    public class LevelConfig
     {
+        
         [SerializeField] private List<Transform> _towersSpawnPoints;
 
         public Vector3 GetTowerPoint(int pointIndex)

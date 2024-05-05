@@ -1,44 +1,50 @@
-﻿using Bootstrapper.Game;
-using Spawners.Factory;
+﻿using System;
+using System.Collections.Generic;
+using Services.Factory;
 using UnityEngine;
-using UnityEngine.Serialization;
 using VContainer;
 using VContainer.Unity;
 
 namespace DI
 {
-    public class ProjectContext : LifetimeScope
+    public class ProjectContext : LifetimeScope , ITickComponent
     {
         [SerializeField] private Monster _enemyPrefab;
-        [SerializeField] private PointsMovement pointsMovement;
-        [FormerlySerializedAs("_levelBuilderComponent")] [SerializeField] private LevelBuilder levelBuilder;
 
-        private int _enemyCount = 20;
+        private const int _defaultValue = 10;
 
+        private List<ITickService> _tickServices = new List<ITickService>();
+        
         protected override void Configure(IContainerBuilder builder)
-        {
-            RegisterEntryPoint(builder);
-            RegisterComponents(builder);
-            RegisterServices(builder);
-        }
-
-        private static void RegisterEntryPoint(IContainerBuilder builder)
-        {
-            builder.RegisterEntryPoint<EntryPoint>();
-            builder.Register<GameFSM>(Lifetime.Singleton);
-        }
-
-        private void RegisterServices(IContainerBuilder builder)
         {
             builder.Register<FactoryPool<Monster>>(Lifetime.Singleton)
                 .WithParameter(_enemyPrefab)
-                .WithParameter(_enemyCount);
+                .WithParameter(_defaultValue);
         }
 
-        private void RegisterComponents(IContainerBuilder builder)
+        public void Update()
         {
-            builder.RegisterComponent(pointsMovement);
-            builder.RegisterComponent(levelBuilder);
+
+            foreach (var service in _tickServices)
+            {
+                service.Tick();
+            }
+            
         }
+
+        public void AddTickService(ITickService service)
+        {
+            _tickServices.Add(service);
+        }
+    }
+
+    public interface ITickComponent
+    {
+        public void AddTickService(ITickService service);
+    }
+
+    public interface ITickService
+    {
+        public void Tick();
     }
 }
