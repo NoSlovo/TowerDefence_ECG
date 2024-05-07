@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Bootstrapper.Game.GameStates;
 using DI;
+using LevelBuilder;
 
 namespace Bootstrapper.Game
 {
@@ -9,12 +10,12 @@ namespace Bootstrapper.Game
     {
         private Dictionary<Type, IGameState> _gameStates;
 
-        public GameStateMashine(ProjectContext projectContext, LevelBuilder.LevelInitialaizer levelInitialaizer,
+        public GameStateMashine(ProjectContext projectContext, LevelInitialaizer levelInitialaizer,
             ITickedServices tickedServices)
         {
             _gameStates = new Dictionary<Type, IGameState>()
             {
-                [typeof(BuildLevelState)] = new BuildLevelState(levelInitialaizer, this),
+                [typeof(LevelInitialaizeState)] = new LevelInitialaizeState(levelInitialaizer, this),
                 [typeof(GamePlayState)] = new GamePlayState(projectContext.Container, levelInitialaizer, tickedServices),
             };
         }

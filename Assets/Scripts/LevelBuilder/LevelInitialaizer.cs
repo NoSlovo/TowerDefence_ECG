@@ -9,7 +9,7 @@ using Object = UnityEngine.Object;
 namespace LevelBuilder
 {
     [Serializable]
-    public class LevelInitialaizer : ILevelBuilder
+    public class LevelInitialaizer 
     {
         [SerializeField] private List<BaseTower> _towersPrefabs;
         [SerializeField] private TowerSpawnConfig _towerSpawnConfig;
@@ -25,16 +25,8 @@ namespace LevelBuilder
         private int itemIndex = 0;
 
         private List<BaseTower> _activeTowers = new List<BaseTower>();
-
-
-        public void Build()
-        {
-            BuildTowers();
-            BuildPlayfield();
-        }
-
-
-        private void BuildTowers()
+        
+        public void InstacneTowers()
         {
             foreach (var tower in _towersPrefabs)
             {
@@ -46,7 +38,7 @@ namespace LevelBuilder
             }
         }
 
-        private void BuildPlayfield()
+        public void InstacnePlayfield()
         {
             var playfield = Object.Instantiate(_groundPrefab);
             playfield.transform.position = _groundPointInstance.position;

@@ -18,7 +18,7 @@ namespace Spawners
 
         private PoolService<Monster> _poolService;
 
-        public EnemySpawner(PoolService<Monster> poolService, ILevelBuilder levelCreator)
+        public EnemySpawner(PoolService<Monster> poolService, LevelInitialaizer levelCreator)
         {
             _poolService = poolService;
             _showPoint = levelCreator.ShowPoint;

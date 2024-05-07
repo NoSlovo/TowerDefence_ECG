@@ -1,4 +1,5 @@
-﻿using DI;
+﻿using Bootstrapper.Game.GameStates;
+using DI;
 using UnityEngine;
 
 namespace Bootstrapper.Game
@@ -14,7 +15,7 @@ namespace Bootstrapper.Game
         private void Start()
         {
             _game = new GameStateMashine(_projectContext,  levelInitialaizer,_projectContext);
-            _game.EnterState<BuildLevelState>();
+            _game.EnterState<LevelInitialaizeState>();
             DontDestroyOnLoad(this);
         }
         

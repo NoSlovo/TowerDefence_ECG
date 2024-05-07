@@ -1,5 +1,5 @@
 ﻿using DI;
-using LevelBuilder.InterfacesBuilding;
+using LevelBuilder;
 using Services.Pool;
 using Spawners;
 using Towers.EnemyTracker;
@@ -13,14 +13,14 @@ namespace Bootstrapper.Game.GameStates
         private EnemyTrackerService _enemyTrackerService;
         private ITickedServices _tickedServices;
 
-        public GamePlayState(IObjectResolver resolver,ILevelBuilder builder, ITickedServices component)
+        public GamePlayState(IObjectResolver resolver,LevelInitialaizer levelInitialaize, ITickedServices component)
         {
-            _enemySpawner = new EnemySpawner(resolver.Resolve<PoolService<Monster>>(), builder);
-            _enemyTrackerService = new EnemyTrackerService(builder.GetActiveTower(),_enemySpawner.GetEnemies());
+            _enemySpawner = new EnemySpawner(resolver.Resolve<PoolService<Monster>>(), levelInitialaize);
+            _enemyTrackerService = new EnemyTrackerService(levelInitialaize.GetActiveTower(),_enemySpawner.GetEnemies());
             _tickedServices = component;
         }
 
-        public void EnterState()
+        public void EnterState() 
         {
             _enemySpawner.Initialize();
             _enemyTrackerService.Init();

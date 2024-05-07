@@ -13,8 +13,6 @@ namespace Components
 
         private PoolService<Projectile> _poolService;
 
-        public Transform ShootPoint => _shootPoint;
-
         public void Init()
         {
             _poolService = new PoolService<Projectile>(_projectilePrefab, 10);
