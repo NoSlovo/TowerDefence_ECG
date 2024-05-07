@@ -283,14 +283,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _projectContext: {fileID: 1028307243}
-  levelCreator:
+  levelInitialaizer:
     _towersPrefabs:
-    - {fileID: 363520197873165417, guid: 861e5e1744cb32d458e49dbad22c6dbb, type: 3}
     - {fileID: 6868862410804308719, guid: 6506f4683427a4d4fa931af0ab609172, type: 3}
+    - {fileID: 363520197873165417, guid: 861e5e1744cb32d458e49dbad22c6dbb, type: 3}
     _towerSpawnConfig:
-      _towersSpawnPoints:
-      - {fileID: 1449251527}
-      - {fileID: 1449251526}
+      _towersSpawnPoints: []
     _groundPrefab: {fileID: 5139207044723686893, guid: ebe8ad5a0a7da8246a6eb31517086bd5, type: 3}
     _groundPointInstance: {fileID: 1449251525}
     _spawnPoint: {fileID: 1449251528}
@@ -539,16 +537,6 @@ PrefabInstance:
 --- !u!4 &1449251525 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8622853729152646630, guid: 84d919a9decab334e883ec18a0eeb74c, type: 3}
-  m_PrefabInstance: {fileID: 1449251524}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1449251526 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7143082238093091894, guid: 84d919a9decab334e883ec18a0eeb74c, type: 3}
-  m_PrefabInstance: {fileID: 1449251524}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1449251527 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9133160459046720827, guid: 84d919a9decab334e883ec18a0eeb74c, type: 3}
   m_PrefabInstance: {fileID: 1449251524}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1449251528 stripped

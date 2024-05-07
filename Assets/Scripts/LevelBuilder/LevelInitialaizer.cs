@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using LevelBuilder.Configs;
 using LevelBuilder.InterfacesBuilding;
 using Towers;
 using UnityEngine;
@@ -8,7 +9,7 @@ using Object = UnityEngine.Object;
 namespace LevelBuilder
 {
     [Serializable]
-    public class LevelCreator : ILevelBuilder
+    public class LevelInitialaizer : ILevelBuilder
     {
         [SerializeField] private List<BaseTower> _towersPrefabs;
         [SerializeField] private TowerSpawnConfig _towerSpawnConfig;

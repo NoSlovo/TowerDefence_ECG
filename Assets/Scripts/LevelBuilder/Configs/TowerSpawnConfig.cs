@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LevelBuilder
+namespace LevelBuilder.Configs
 {
     [Serializable]
     public struct TowerSpawnConfig

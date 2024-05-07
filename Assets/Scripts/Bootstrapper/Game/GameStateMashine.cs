@@ -9,13 +9,13 @@ namespace Bootstrapper.Game
     {
         private Dictionary<Type, IGameState> _gameStates;
 
-        public GameStateMashine(ProjectContext projectContext, LevelBuilder.LevelCreator levelCreator,
+        public GameStateMashine(ProjectContext projectContext, LevelBuilder.LevelInitialaizer levelInitialaizer,
             ITickedServices tickedServices)
         {
             _gameStates = new Dictionary<Type, IGameState>()
             {
-                [typeof(BuildLevelState)] = new BuildLevelState(levelCreator, this),
-                [typeof(GamePlayState)] = new GamePlayState(projectContext.Container, levelCreator, tickedServices),
+                [typeof(BuildLevelState)] = new BuildLevelState(levelInitialaizer, this),
+                [typeof(GamePlayState)] = new GamePlayState(projectContext.Container, levelInitialaizer, tickedServices),
             };
         }
 

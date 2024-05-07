@@ -148,7 +148,7 @@ MonoBehaviour:
   attackRange: 7
   shooterComponent:
     _projectilePrefab: {fileID: 2682025307691134451, guid: 4124357cfe121804f9eea0a690ce3b52, type: 3}
-    shootPoint: {fileID: 690167710289016260}
+    _shootPoint: {fileID: 690167710289016260}
   _cannonTransform: {fileID: 2303417219713402402}
   _turningSpeed: 150
 --- !u!1 &2303417219713597820

@@ -9,11 +9,11 @@ namespace Components
     public class ShootComponent
     {
         [SerializeField] private Projectile _projectilePrefab;
-        [SerializeField] private Transform shootPoint;
+        [SerializeField] private Transform _shootPoint;
 
         private PoolService<Projectile> _poolService;
 
-        public Transform ShootPoint => shootPoint;
+        public Transform ShootPoint => _shootPoint;
 
         public void Init()
         {
@@ -26,7 +26,7 @@ namespace Components
                 return;
 
             var projectile = _poolService.GetElement();
-            projectile.transform.position = shootPoint.position;
+            projectile.transform.position = _shootPoint.position;
             projectile.LaunchToTarget(target.transform);
         }
 
