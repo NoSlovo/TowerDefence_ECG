@@ -144,9 +144,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed9d54577704397af6a0d41a4b2912f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reload: 0.5
-  attackRange: 7
-  shooterComponent:
+  _reload: 0.5
+  _attackRange: 8
+  _shooterComponent:
     _projectilePrefab: {fileID: 2682025307691134451, guid: 4124357cfe121804f9eea0a690ce3b52, type: 3}
     _shootPoint: {fileID: 690167710289016260}
   _cannonTransform: {fileID: 2303417219713402402}

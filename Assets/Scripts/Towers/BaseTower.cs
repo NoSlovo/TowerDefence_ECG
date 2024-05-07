@@ -6,22 +6,19 @@ namespace Towers
 {
     public abstract class BaseTower : MonoBehaviour
     {
-        [SerializeField] private float reload = 0.5f;
-        [SerializeField] private float attackRange = 5f;
-        [SerializeField] private ShootComponent shooterComponent;
+        [SerializeField] private float _reload = 0.5f;
+        [SerializeField] private float _attackRange = 5f;
+        [SerializeField] private ShootComponent _shooterComponent;
 
         public bool HasTarget => Target != null;
         public Vector3 Position => transform.position;
-        public float AttackRange => attackRange;
+        public float AttackRange => _attackRange;
 
         protected IEnemy Target;
 
         private float _currentReloadTime;
 
-        public virtual void Initialize()
-        {
-            shooterComponent.Init();
-        }
+        public virtual void Initialize() => _shooterComponent.Init();
 
         public void Shoot()
         {
@@ -34,21 +31,15 @@ namespace Towers
                 return;
             }
 
-            _currentReloadTime = reload;
-            shooterComponent.ShootToTarget(Target.Transform);
+            _currentReloadTime = _reload;
+            _shooterComponent.ShootToTarget(Target.Transform);
 
-            if (shooterComponent.CheckAttackDistance(transform, Target.Transform, AttackRange))
+            if (_shooterComponent.CheckAttackDistance(transform, Target.Transform, AttackRange))
                 StopShooting();
         }
 
-        public virtual void SetTarget(IEnemy target)
-        {
-            Target = target;
-        }
+        public virtual void SetTarget(IEnemy target) => Target = target;
 
-        protected void StopShooting()
-        {
-            Target = null;
-        }
+        private void StopShooting() => Target = null;
     }
 }

@@ -412,8 +412,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bb73193b9ba40358a41fcf26bccf48b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reload: 0.5
-  attackRange: 6
-  shooterComponent:
+  _reload: 0.5
+  _attackRange: 7
+  _shooterComponent:
     _projectilePrefab: {fileID: 6078270644910172657, guid: 83b1bef18dd7ed947ae8f4d857327102, type: 3}
     _shootPoint: {fileID: 4164511260988363861}

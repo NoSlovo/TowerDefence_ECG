@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using LevelBuilder.Configs;
-using LevelBuilder.InterfacesBuilding;
 using Towers;
 using UnityEngine;
 using Object = UnityEngine.Object;
